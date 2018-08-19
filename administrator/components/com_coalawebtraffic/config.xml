@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+    <fieldset
+            name="GENERAL"
+            label="COM_CWTRAFFIC_GENERAL_TAB"
+            addfieldpath="plugins/system/cwgears/fields">
+
+        <field
+                name="css_import"
+                type="csscom"/>
+
+        <field
+                name="general_header"
+                type="header"
+                default="COM_CWTRAFFIC_GENERAL_SEPARATOR"/>
+
+        <field
+                name="locktime"
+                type="text"
+                default="1440"
+                required="true"
+                label="COM_CWTRAFFIC_LOCKTIME"
+                description="COM_CWTRAFFIC_LOCKTIME_DESC"/>
+
+        <field
+                name="week_start"
+                type="list"
+                default="mon"
+                label="COM_CWTRAFFIC_FIELD_WEEKSTART_LABEL"
+                description="COM_CWTRAFFIC_FIELD_WEEKSTART_DESC">
+            <option value="sat">CW_SATURDAY</option>
+            <option value="sun">CW_SUNDAY</option>
+            <option value="mon">CW_MONDAY</option>
+        </field>
+
+        <field
+                name="preset"
+                type="text"
+                default="0"
+                label="COM_CWTRAFFIC_PRESET_COUNTER"
+                description="COM_CWTRAFFIC_PRESET_COUNTER_DESC"/>
+
+    </fieldset>
+
+    <fieldset
+            name="STORAGE"
+            label="COM_CWTRAFFIC_STORAGE_TAB">
+
+        <field
+                name="storage_header"
+                type="header"
+                default="COM_CWTRAFFIC_STORAGE_SEPARATOR"/>
+
+        <field
+                name="store_raw"
+                type="radio" 
+                default="1"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_STORE_RAW_LABEL"
+                description="COM_CWTRAFFIC_FIELD_STORE_RAW_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+        <field
+                name="store_location"
+                type="radio"
+                default="1"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_STORE_LOCATION_LABEL"
+                description="COM_CWTRAFFIC_FIELD_STORE_LOCATION_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset
+            name="ROBOTS"
+            label="COM_CWTRAFFIC_ROBOTS_TAB">
+
+        <field
+                name="robots_header"
+                type="header"
+                default="COM_CWTRAFFIC_ROBOTS_SEPARATOR"/>
+
+        <field
+                name="robots_info"
+                type="info"
+                default=""
+                label="COM_CWTRAFFIC_ROBOTS_BASIC_MSG"/>
+
+        <field
+                name="basic_bots"
+                type="radio" 
+                default="0"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_ROBOTS_LABEL"
+                description="COM_CWTRAFFIC_FIELD_ROBOTS_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset
+            name="CLEANUP"
+            label="COM_CWTRAFFIC_CLEANUP_TAB">
+
+        <field
+                name="advanced_header"
+                type="header"
+                default="COM_CWTRAFFIC_CLEANUP_SEPARATOR"/>
+
+        <field
+                name="duplicate_clean"
+                type="radio"
+                default="0"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_DUPLICATE_CLEAN_LABEL"
+                description="COM_CWTRAFFIC_FIELD_DUPLICATE_CLEAN_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+        <field
+                name="db_clean"
+                type="radio"
+                default="0"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_DBCLEANUP"
+                description="COM_CWTRAFFIC_DBCLEANUP_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+        <field
+                name="db_keep"
+                type="list"
+                default="1"
+                label="COM_CWTRAFFIC_FIELD_KEEP_LABEL"
+                description="COM_CWTRAFFIC_FIELD_KEEP_DESC">
+            <option value="1">COM_CWTRAFFIC_FIELD_KEEP_OPT1</option>
+            <option value="2">COM_CWTRAFFIC_FIELD_KEEP_OPT2</option>
+            <option value="3">COM_CWTRAFFIC_FIELD_KEEP_OPT3</option>
+            <option value="4">COM_CWTRAFFIC_FIELD_KEEP_OPT4</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset
+            name="HP"
+            label="COM_CWTRAFFIC_HP_TAB">
+
+        <field
+                name="advanced_header"
+                type="header"
+                default="COM_CWTRAFFIC_HP_SEPARATOR"/>
+
+        <field
+                name="hp_info"
+                type="info"
+                default=""
+                label="COM_CWTRAFFIC_HP_MSG"/>
+
+
+        <field
+                name="honeypot"
+                type="radio"
+                default="0"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_HP_LABEL"
+                description="COM_CWTRAFFIC_FIELD_HP_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+        <field
+                name="honeypot_key"
+                type="text"
+                default=""
+                label="COM_CWTRAFFIC_FIELD_HP_KEY_LABEL"
+                description="COM_CWTRAFFIC_FIELD_HP_KEY_DESC"/>
+
+        <field
+                name="honeypot_sus"
+                type="radio"
+                default="0"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_HP_SUS_LABEL"
+                description="COM_CWTRAFFIC_FIELD_HP_SUS_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+        <field
+                name="honeypot_seng"
+                type="radio"
+                default="0"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_HP_SENG_LABEL"
+                description="COM_CWTRAFFIC_FIELD_HP_SENG_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+        <field
+                name="honeypot_min"
+                type="text"
+                default="25"
+                label="COM_CWTRAFFIC_FIELD_HP_MIN_LABEL"
+                description="COM_CWTRAFFIC_FIELD_HP_MIN_DESC"/>
+
+        <field
+                name="honeypot_max"
+                type="text"
+                default="30"
+                label="COM_CWTRAFFIC_FIELD_HP_MAX_LABEL"
+                description="COM_CWTRAFFIC_FIELD_HP_MAX_DESC"/>
+
+    </fieldset>
+
+    <fieldset
+            name="CHARTS"
+            label="COM_CWTRAFFIC_CHARTS_TAB">
+
+        <field
+                name="charts_header"
+                type="header"
+                default="COM_CWTRAFFIC_CHARTS_SEPARATOR"/>
+
+        <field
+                type="spacer"
+                name="charts_spacer_count"
+                label="COM_CWTRAFFIC_SPACER_CHART_COUNTS"
+                class="cw_label"/>
+
+        <field
+                name="chart_day_count"
+                type="list"
+                default="30"
+                label="COM_CWTRAFFIC_FIELD_CHART_DAY_COUNT_LABEL"
+                description="COM_CWTRAFFIC_FIELD_CHART_DAY_COUNT_DESC">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+        </field>
+
+        <field
+                name="chart_country_count"
+                type="list"
+                default="10"
+                label="COM_CWTRAFFIC_FIELD_CHART_COUNTRY_COUNT_LABEL"
+                description="COM_CWTRAFFIC_FIELD_CHART_COUNTRY_COUNT_DESC">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+        </field>
+
+        <field
+                name="chart_city_count"
+                type="list"
+                default="10"
+                label="COM_CWTRAFFIC_FIELD_CHART_CITY_COUNT_LABEL"
+                description="COM_CWTRAFFIC_FIELD_CHART_CITY_COUNT_DESC">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+        </field>
+
+        <field
+                name="chart_browser_count"
+                type="list"
+                default="10"
+                label="COM_CWTRAFFIC_FIELD_CHART_BROWSER_COUNT_LABEL"
+                description="COM_CWTRAFFIC_FIELD_CHART_BROWSER_COUNT_DESC">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+        </field>
+
+        <field
+                name="chart_platform_count"
+                type="list"
+                default="10"
+                label="COM_CWTRAFFIC_FIELD_CHART_PLATFORM_COUNT_LABEL"
+                description="COM_CWTRAFFIC_FIELD_CHART_PLATFORM_COUNT_DESC">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset
+            name="updates"
+            label="COM_CWTRAFFIC_UPDATES_TAB">
+
+        <field
+                name="updates_header"
+                type="header"
+                default="COM_CWTRAFFIC_FIELD_UPDATES_DESC"
+                label=""
+                description=""/>
+
+        <field
+                name="downloadid"
+                type="text"
+                default=""
+                size="30"
+                label="COM_CWTRAFFIC_FIELD_DOWNLOADID_LABEL"
+                description="COM_CWTRAFFIC_FIELD_DOWNLOADID_DESC"/>
+
+    </fieldset>
+
+    <fieldset
+            name="advanced"
+            label="COM_CWTRAFFIC_ADVANCED_TAB">
+
+        <field
+                name="check_proxy"
+                type="radio"
+                default="1"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_CHECK_PROXY_LABEL"
+                description="COM_CWTRAFFIC_FIELD_CHECK_PROXY_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+        <field
+                name="log_sql"
+                type="radio"
+                default="0"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_LOG_SQL_LABEL"
+                description="COM_CWTRAFFIC_FIELD_LOG_SQL_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+        <field
+                name="log_debug"
+                type="radio"
+                default="0"
+                class="btn-group btn-group-yesno"
+                label="COM_CWTRAFFIC_FIELD_LOG_DEBUG_LABEL"
+                description="COM_CWTRAFFIC_FIELD_LOG_DEBUG_DESC">
+            <option value="1">CW_YES</option>
+            <option value="0">CW_NO</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC">
+
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                class="inputbox"
+                validate="rules"
+                filter="rules"
+                component="com_coalawebtraffic"
+                section="component"/>
+    </fieldset>
+
+</config>

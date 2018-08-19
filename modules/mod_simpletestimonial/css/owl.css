@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+ 
+.testimonial{
+    margin: 0 15px;
+}
+.pic{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+.pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.testimonial-title {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+.testimonial-review{
+    background: #37a6a4;
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+}
+.testimonial-review:before{
+    content: "";
+    border-bottom: 20px solid #37a6a4;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    top: -15px;
+    left: 46%;
+}
+.testimonial-review .description{
+    color: #fff;
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+}
+.owl-theme .owl-controls{
+    margin-top: 30px;
+}
+.owl-theme .owl-controls .owl-page span{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #37a6a4;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+    background: #37a6a4;
+}
+@media screen and (max-width: 990px){
+    .testimonial{
+        margin: 0;
+    }
+}

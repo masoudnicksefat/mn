@@ -1,0 +1,219 @@
+/**
+ * @author              Steven Palmer
+ * @author url          http://coalaweb.com
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+ */
+
+.cwt-digi-counter {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cwt-indi-counter-100, .cwt-indi-counter-90,
+.cwt-indi-counter-80, .cwt-indi-counter-70,
+.cwt-indi-counter-60, .cwt-indi-counter-50 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cwt-indi-counter-100 {width: 100%;}
+.cwt-indi-counter-90 {width: 90%;}
+.cwt-indi-counter-80 {width: 80%;}
+.cwt-indi-counter-70 {width: 70%;}
+.cwt-indi-counter-60 {width: 60%;}
+.cwt-indi-counter-50 {width: 50%;}
+
+.cwt-icon {
+    display: inline-block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Stats right*/
+.cw_stats_r0, .cw_stats_r1,
+.cw_stats_r2,.cw_stats_r3,
+.cw_stats_r4, .cw_stats_r5 {
+    float:right;
+}
+
+.cw-mod-traffic-100, .cw-mod-traffic-90,
+.cw-mod-traffic-80, .cw-mod-traffic-70,
+.cw-mod-traffic-60, .cw-mod-traffic-50 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cw-mod-traffic-100 {width: 100%;}
+.cw-mod-traffic-90 {width: 90%;}
+.cw-mod-traffic-80 {width: 80%;}
+.cw-mod-traffic-70 {width: 70%;}
+.cw-mod-traffic-60 {width: 60%;}
+.cw-mod-traffic-50 {width: 50%;}
+
+.cw-mod-traffic-100 hr, .cw-mod-traffic-90 hr,
+.cw-mod-traffic-80 hr, .cw-mod-traffic-70 hr,
+.cw-mod-traffic-60 hr, .cw-mod-traffic-50 hr {
+    background: none repeat scroll 0 0 #C8C8C8;
+    border: medium none;
+    display: block;
+    height: 1px;
+    margin: 12px 0;
+}
+
+/*------------------------------------------------------------------------------
+Guest Info
+------------------------------------------------------------------------------*/
+.cwt-vi {
+    font-size: 12px;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.cwt-vi a {text-decoration: none;}
+
+.cwt-vi h1, .cwt-vi h2,
+.cwt-vi h3, .cwt-vi h4,
+.cwt-vi h5, .cwt-vi h6 {
+    border:none !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.cwt-vi-title-ac {text-align:center;}
+.cwt-vi-title-al {text-align:left;}
+.cwt-vi-title-ar {text-align:right;}
+
+.cwt-vi ul {
+    margin: 0px !important;
+    padding: 0px !important;
+    list-style: none outside none;
+    overflow: hidden;
+        text-align: center;
+}
+
+.cwt-vi li {
+    padding: 2px !important;
+    margin: 0px !important;
+    vertical-align: top;
+    overflow: hidden;
+    background: none repeat scroll 0px 0px transparent !important;
+
+}
+
+/*------------------------------------------------------------------------------
+Who is online
+------------------------------------------------------------------------------*/
+.cwt-wio {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.cwt-wio h1, .cwt-wio h2,
+.cwt-wio h3, .cwt-wio h4,
+.cwt-wio h5, .cwt-wio h6 {
+    border:none !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.cwt-wio-title-ac {text-align:center;}
+.cwt-wio-title-al {text-align:left;}
+.cwt-wio-title-ar {text-align:right;}
+
+
+.cwt-wio ul {
+    margin: 0px !important;
+    padding: 0px !important;
+    list-style: none outside none;
+    overflow: hidden;
+}
+
+.cwt-wio li {
+    padding: 3px !important;
+    margin: 0px !important;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    background: none repeat scroll 0px 0px transparent !important;
+}
+
+.cwt-wio-count{
+    color:#777777;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.cwt-wio-inner {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cwt-wio-label {
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    margin-top:2px;
+}
+
+
+/*------------------------------------------------------------------------------
+Show Support and Date
+------------------------------------------------------------------------------*/
+.cwt-copyrht, .cwt-datetime{
+    text-align: center;
+    display:block;
+    clear:both;
+    font-size: 12px;
+    margin:5px 0 0;
+}
+
+/*------------------------------------------------------------------------------
+Horizontal Layout
+------------------------------------------------------------------------------*/
+
+.cwt-hor {
+    float: none;
+    width:100%;
+    margin:5px 2px !important;
+    height:auto;
+    display:inline-block;
+    position:relative;
+    text-align:left;
+}
+
+.cwt-hor .cwt-digi-counter {margin-bottom: 0px; }
+
+ul.cwt-hor-items {
+    margin: 0 !important;
+    padding: 0!important;
+    list-style: none;
+}
+
+ul.cwt-hor-items li {
+    padding: 0px !important;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+ul.cwt-hor-items li::before {
+    content: none !important;
+}
+
+/*ADDED BY JOOMI.IR*/
+
+[dir="rtl"] .cw_stats_r0,
+[dir="rtl"] .cw_stats_r1,
+[dir="rtl"] .cw_stats_r2,
+[dir="rtl"] .cw_stats_r3,
+[dir="rtl"] .cw_stats_r4,
+[dir="rtl"] .cw_stats_r5 {
+	float: left;
+}
+[dir="rtl"] .cwt-hor {
+	text-align: right;
+}
+[dir="rtl"] .cwt-digi-counter {
+	direction: ltr;
+}

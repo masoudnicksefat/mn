@@ -1,0 +1,39 @@
+/**
+ * @author              Steven Palmer
+ * @author url          http://coalaweb.com
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+ */
+
+.cwt-stats-lt-traffic-lights, .cwt-stats-ly-traffic-lights,
+.cwt-stats-lw-traffic-lights, .cwt-stats-lm-traffic-lights,
+.cwt-stats-la-traffic-lights {
+    background:url(../icons/trafficlights.png) no-repeat 0px 12px;
+}
+
+.cwt-stats-lt-traffic-lights, .cwt-stats-ly-traffic-lights,
+.cwt-stats-lw-traffic-lights, .cwt-stats-lm-traffic-lights,
+.cwt-stats-la-traffic-lights {
+    padding-left:20px;
+    float:left;
+}
+
+.cwt-stats-lt-traffic-lights { background-position: 0px 2px; }
+.cwt-stats-ly-traffic-lights { background-position: 0px -64px; }
+.cwt-stats-lw-traffic-lights { background-position: 0px -130px; }
+.cwt-stats-lm-traffic-lights { background-position: 0px -196px; }
+.cwt-stats-la-traffic-lights { background-position: 0px -262px; }
+
+/*ADDED BY JOOMI.IR*/
+[dir="rtl"] .cwt-stats-lt-lights, .cwt-stats-ly-lights,
+[dir="rtl"] .cwt-stats-lw-lights, .cwt-stats-lm-lights,
+[dir="rtl"] .cwt-stats-la-lights {
+    padding-right:22px;
+    float:right;
+    padding-left: none !important;
+}
+[dir="rtl"] .cwt-stats-lt-lights{ background-position: 100% 0px; }
+[dir="rtl"] .cwt-stats-ly-lights { background-position: 100% -66px; }
+[dir="rtl"] .cwt-stats-lw-lights { background-position: 100% -132px; }
+[dir="rtl"] .cwt-stats-lm-lights { background-position: 100% -198px; }
+[dir="rtl"] .cwt-stats-la-lights { background-position: 100% -264px; }

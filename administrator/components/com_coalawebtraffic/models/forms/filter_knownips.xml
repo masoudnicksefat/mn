@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="COM_CWTRAFFIC_FILTER_SEARCH_DESC"
+            hint="JSEARCH_FILTER"
+            class="js-stools-search-string"/>
+                
+        <field
+            name="state"
+            type="status"
+            label="JOPTION_SELECT_PUBLISHED"
+            description="JOPTION_SELECT_PUBLISHED_DESC"
+            onchange="this.form.submit();">
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+        
+        <field
+            name="category_id"
+            type="category"
+            label="JOPTION_FILTER_CATEGORY"
+            extension="com_coalawebtraffic"
+            description="JOPTION_FILTER_CATEGORY_DESC"
+            onchange="this.form.submit();">
+            <option value="">JOPTION_SELECT_CATEGORY</option>
+        </field>    					
+    </fields>
+        
+    <fields name="list">
+        
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            description="JGLOBAL_SORT_BY"
+            onchange="this.form.submit();"
+            default="a.alias ASC">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+            <option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="a.state ASC">JSTATUS_ASC</option>
+            <option value="a.state DESC">JSTATUS_DESC</option>
+            <option value="a.ip ASC">COM_CWTRAFFIC_FIELD_IP_ORDERING_ASC</option>
+            <option value="a.ip DESC">COM_CWTRAFFIC_FIELD_IP_ORDERING_DESC</option>
+            <option value="a.botname ASC">COM_CWTRAFFIC_FIELD_BOT_ORDERING_ASC</option>
+            <option value="a.botname DESC">COM_CWTRAFFIC_FIELD_BOT_ORDERING_DESC</option>
+            <option value="a.count ASC">COM_CWTRAFFIC_FIELD_COUNT_ORDERING_ASC</option>
+            <option value="a.count DESC">COM_CWTRAFFIC_FIELD_COUNT_ORDERING_DESC</option>
+            <option value="category_title ASC">JCATEGORY_ASC</option>
+            <option value="category_title DESC">JCATEGORY_DESC</option>
+            <option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+            <option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+        </field>
+        
+        <field
+            name="limit"
+            type="limitbox"
+            class="inputbox input-mini"
+            default="25"
+            label="COM_CWTRAFFIC_LIST_LIMIT"
+            description="COM_CWTRAFFIC_LIST_LIMIT_DESC"
+            onchange="this.form.submit();"/>
+    </fields>
+    
+</form>

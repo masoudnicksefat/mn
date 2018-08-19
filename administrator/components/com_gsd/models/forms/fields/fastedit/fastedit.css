@@ -1,0 +1,21 @@
+.form-horizontal .controls .gsdFastEdit {
+	margin-left:-180px;
+}
+.gsdFastEdit table {
+    max-width: 500px;
+}
+.gsdFastEdit.working {
+    pointer-events: none;
+}
+.gsdFastEdit table td {
+    vertical-align: middle;
+}
+.gsdFastEdit .text-right {
+    text-align:right;
+}
+.gsdID {
+    opacity: .5;
+}
+.gsdFastEdit .btn-toolbar [class^="icon-"] {
+    margin:0;
+}

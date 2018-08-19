@@ -1,0 +1,276 @@
+/**
+ * @author              Steven Palmer
+ * @author url          https://coalaweb.com/
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+*/
+
+/*------------------------------------------------------------------------------
+Layout
+------------------------------------------------------------------------------*/
+.cw-plg-contact-light-clean100 {width: 100%;}
+.cw-plg-contact-light-clean90 {width: 90%;}
+.cw-plg-contact-light-clean80 {width: 80%;}
+.cw-plg-contact-light-clean70 {width: 70%;}
+.cw-plg-contact-light-clean60 {width: 60%;}
+.cw-plg-contact-light-clean50 {width: 50%;}
+
+#cw-plg-contact-light-clean { 
+    margin:0 0 5px 0;
+    padding:0px 5px;
+}
+
+#cw-plg-contact-light-clean form { 
+    margin:0; 
+    padding:0;
+}
+
+/*------------------------------------------------------------------------------
+Messages 
+------------------------------------------------------------------------------*/
+#cw-plg-contact-light-clean .error, 
+#cw-plg-contact-light-clean .success  {
+    clear:both; 
+    display:block; 
+    padding: 5px 5px 5px 35px; 
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); 
+    border-width:1px; 
+    border-style:solid; 
+    -webkit-border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    border-radius: 0px;  
+    font-size:11px; 
+    margin:5px 0px;
+    line-height:20px;
+}
+
+#cw-plg-contact-light-clean .error{
+    background: url("../icons/cw-alert.png") no-repeat scroll -2px center #FFF0EB;
+    border-color: #FFD7CD; 
+    color: #b94a48; 
+}
+
+#cw-plg-contact-light-clean .success{
+    background: url("../icons/cw-info.png") no-repeat scroll -5px center #EBF5FA;
+    border-color: #D2DCE1;
+    color: #2382B2; 
+}
+
+/*------------------------------------------------------------------------------
+Fields
+------------------------------------------------------------------------------*/
+#cw-plg-contact-light-clean select, 
+#cw-plg-contact-light-clean textarea, 
+#cw-plg-contact-light-clean input[type="text"], 
+#cw-plg-contact-light-clean input[type="password"], 
+#cw-plg-contact-light-clean input[type="datetime"], 
+#cw-plg-contact-light-clean input[type="datetime-local"], 
+#cw-plg-contact-light-clean input[type="date"], 
+#cw-plg-contact-light-clean input[type="month"], 
+#cw-plg-contact-light-clean input[type="time"], 
+#cw-plg-contact-light-clean input[type="week"], 
+#cw-plg-contact-light-clean input[type="number"], 
+#cw-plg-contact-light-clean input[type="email"], 
+#cw-plg-contact-light-clean input[type="url"], 
+#cw-plg-contact-light-clean input[type="search"], 
+#cw-plg-contact-light-clean input[type="tel"], 
+#cw-plg-contact-light-clean input[type="color"], 
+#cw-plg-contact-light-clean .uneditable-input {
+    display: inline-block;
+    box-sizing: content-box;
+    width: 95%;
+    padding: 4px 6px;
+    margin-bottom: 9px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 0px;
+    border: 1px solid #DDD;
+    background: none repeat scroll 0% 0% #FFFFFF;
+    box-shadow:none;
+}
+
+#cw-plg-contact-light-clean input[type="file"] {
+    display: inline-block;
+    box-sizing: content-box;
+    width: 95%;
+    padding: 4px 6px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #555;
+    box-shadow:none;
+    line-height: 0;
+}
+
+#cw-plg-contact-light-clean label{
+    margin-bottom:4px;
+    display:inline-block;
+    width:100%;
+}
+
+#cw-plg-contact-light-clean .copyme label, 
+#cw-plg-contact-light-clean .copyme input,
+#cw-plg-contact-light-clean .tos label, 
+#cw-plg-contact-light-clean .tos input{ 
+    display:inline-block;
+    margin:0;
+    font-weight:normal;
+    width:80%;
+}
+
+#cw-plg-contact-light-clean .copyme input,
+#cw-plg-contact-light-clean .tos input{ 
+    vertical-align: middle;
+    margin-left:5px;
+    width:auto;
+}
+
+#cw-plg-contact-light-clean .copyme label,
+#cw-plg-contact-light-clean .tos label{padding: 0px 5px;}
+#cw-plg-contact-light-clean .copyme,
+#cw-plg-contact-light-clean .tos{margin-top:10px;}
+
+#cw-plg-contact-light-clean textarea {height:auto;}
+#cw-plg-contact-light-clean textarea:focus, 
+#cw-plg-contact-light-clean input:focus,
+#cw-plg-contact-light-clean select:focus {
+    border-color:rgba(82, 168, 236, 0.8);
+    font-weight: normal !important;
+    box-shadow: none !important;
+}
+
+#cw-plg-contact-light-clean .invalid {
+    font-weight: normal !important;
+    color: #FF8400 !important;
+    box-shadow: none !important;
+    border-color:#FF8400 !important;
+}
+
+#cw-plg-contact-light-clean input:focus:invalid, 
+#cw-plg-contact-light-clean textarea:focus:invalid,
+#cw-plg-contact-light-clean select:focus:invalid{
+    border-color: #FF8400 !important;
+    box-shadow: none !important;
+    font-weight: normal !important;
+    color: #FF8400 !important;
+    border-color:#FF8400 !important;
+}
+
+/*------------------------------------------------------------------------------
+Buttons
+------------------------------------------------------------------------------*/
+.cw-plg-contact-light-clean-buttons {
+    display:inline-block;
+    width:95%;
+}
+
+.cw-plg-contact-light-clean-buttons .btn-submit{
+    margin-left:auto;
+    margin-right:auto;
+    float:right;
+    margin-top: 5px;
+}
+
+/*------------------------------------------------------------------------------
+Character Count and Calendar
+------------------------------------------------------------------------------*/
+#cw-plg-contact-light-clean .charcount,
+#cw-plg-contact-light-clean .cal-format{ 
+    text-align: right;
+    line-height:0.8em;
+    margin-bottom:10px;
+    width:95%;
+}
+
+#cw-plg-contact-light-clean .cal-format{ 
+    text-align: left;
+    display:block;
+}
+
+#cw-plg-contact-light-clean .char-counter{ 
+    border-color: #D2DCE1;
+    color: #2382B2; 
+}
+
+#cw-plg-contact-light-clean .charcount label,
+#cw-plg-contact-light-clean .cal-format label{ 
+    font-size: 95%;
+    font-style: italic;
+}
+
+/*------------------------------------------------------------------------------
+Captcha
+------------------------------------------------------------------------------*/
+#recaptcha_area input[type="text"] {
+    display: inline-block;
+    height: auto;
+}
+
+#recaptcha_area, #recaptcha_table { line-height: 0!important;}
+#cw-plg-contact-light-clean  .recaptcha {margin-top:10px;}
+
+/*------------------------------------------------------------------------------
+Added in version 0.0.3
+------------------------------------------------------------------------------*/
+
+#cw-plg-contact-light-clean .cal input[type="text"]{
+    width:auto;
+    min-width: 120px;
+}
+#cw-plg-contact-light-clean .cal label{
+    width: 100%;
+}
+
+/*#cw-plg-contact-light-clean .btn {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    text-shadow: none;
+    background: #F5F5F5;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DDD;
+    border-image: none;
+    border-radius: 0px;
+    box-shadow: none;
+}*/
+
+#cw-plg-contact-light-clean .cal .btn{
+    font-size:16px;
+}
+
+/*If you are using a template without Bootstrap or if doesn't display an icon for the calendar please uncomment the the CSS below.*/
+/*#cw-plg-contact-light-clean .icon-calendar {
+    background: url("../icons/cw-calendar.png") no-repeat center;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}*/
+
+#cw-plg-contact-light-clean .cal .input-append, 
+#cw-plg-contact-light-clean .cal .input-prepend  {
+    margin-bottom: 0px;
+}
+
+.cwc-msg {
+    width:95%;
+}
+
+/*------------------------------------------------------------------------------
+Added in version 0.0.4
+------------------------------------------------------------------------------*/
+
+/* Google Maps */
+.cwc-map-canvas {
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.cw-plg-contact-map {
+    margin: 15px 5px;
+    border: 1px solid #DDD;
+    width:95%;
+}

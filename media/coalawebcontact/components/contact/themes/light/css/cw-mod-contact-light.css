@@ -1,0 +1,318 @@
+/**
+ * @author              Steven Palmer
+ * @author url          https://coalaweb.com/
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+*/
+
+/*------------------------------------------------------------------------------
+Layout
+------------------------------------------------------------------------------*/
+.cw-mod-contact-light100,
+.cw-mod-contact-light90,
+.cw-mod-contact-light80,
+.cw-mod-contact-light70,
+.cw-mod-contact-light60,
+.cw-mod-contact-light50 {
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.cw-mod-contact-light100 {width: 100%;}
+.cw-mod-contact-light90 {width: 90%;}
+.cw-mod-contact-light80 {width: 80%;}
+.cw-mod-contact-light70 {width: 70%;}
+.cw-mod-contact-light60 {width: 60%;}
+.cw-mod-contact-light50 {width: 50%;}
+
+#cw-mod-contact-light { 
+    margin:0 0 5px 0;
+    padding:0px 5px;
+}
+
+#cw-mod-contact-light form { 
+    margin:0; 
+    padding:0;
+}
+
+/*------------------------------------------------------------------------------
+Messages 
+------------------------------------------------------------------------------*/
+#cw-mod-contact-light .error, 
+#cw-mod-contact-light .success  {
+    clear:both; 
+    display:block; 
+    padding: 5px 5px 5px 35px; 
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); 
+    border-width:1px; 
+    border-style:solid; 
+    -webkit-border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    border-radius: 4px;  
+    font-size:11px; 
+    margin:5px 0px;
+    line-height:20px;
+}
+
+#cw-mod-contact-light .error{
+    background: url("../icons/cw-alert.png") no-repeat scroll -2px center #FFF0EB;
+    border-color: #FFD7CD; 
+    color: #b94a48; 
+}
+
+#cw-mod-contact-light .success{
+    background: url("../icons/cw-info.png") no-repeat scroll -5px center #EBF5FA;
+    border-color: #D2DCE1;
+    color: #2382B2; 
+}
+
+/*------------------------------------------------------------------------------
+Fields
+------------------------------------------------------------------------------*/
+#cw-mod-contact-light select, 
+#cw-mod-contact-light textarea, 
+#cw-mod-contact-light input[type="text"], 
+#cw-mod-contact-light input[type="password"], 
+#cw-mod-contact-light input[type="datetime"], 
+#cw-mod-contact-light input[type="datetime-local"], 
+#cw-mod-contact-light input[type="date"], 
+#cw-mod-contact-light input[type="month"], 
+#cw-mod-contact-light input[type="time"], 
+#cw-mod-contact-light input[type="week"], 
+#cw-mod-contact-light input[type="number"], 
+#cw-mod-contact-light input[type="email"], 
+#cw-mod-contact-light input[type="url"], 
+#cw-mod-contact-light input[type="search"], 
+#cw-mod-contact-light input[type="tel"], 
+#cw-mod-contact-light input[type="color"], 
+#cw-mod-contact-light .uneditable-input {
+    display:inline-block;
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 0 3px #CCCCCC, 0 10px 15px #EEEEEE inset;
+    width:95%;
+    padding: 4px 6px;
+    margin-bottom: 9px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 3px;
+    box-sizing: content-box;
+}
+
+#cw-mod-contact-light input[type="file"] {
+    display: inline-block;
+    box-sizing: content-box;
+    width: 95%;
+    padding: 4px 6px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #555;
+    box-shadow:none;
+    line-height: 0;
+}
+
+#cw-mod-contact-light label{
+    margin-bottom:4px;
+    display:inline-block;
+    width:100%;
+}
+
+#cw-mod-contact-light .copyme label, 
+#cw-mod-contact-light .copyme input,
+#cw-mod-contact-light .tos label, 
+#cw-mod-contact-light .tos input{ 
+    display:inline-block;
+    margin:0;
+    font-weight:normal;
+    width:80%;
+}
+
+#cw-mod-contact-light .copyme input,
+#cw-mod-contact-light .tos input{ 
+    vertical-align: middle;
+    margin-left:5px;
+    width:auto;
+}
+
+#cw-mod-contact-light .copyme label,
+#cw-mod-contact-light .tos label{
+    padding: 0px 5px;
+    vertical-align: middle !important;
+}
+
+#cw-mod-contact-light .copyme,
+#cw-mod-contact-light .tos{margin-top:10px;}
+#cw-mod-contact-light textarea {height:auto;}
+
+#cw-mod-contact-light textarea:focus, 
+#cw-mod-contact-light input:focus,
+#cw-mod-contact-light select:focus {
+    border-color:rgba(82, 168, 236, 0.8);
+    outline:0;
+    outline:thin dotted \9;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    font-weight: normal !important;
+}
+
+#cw-mod-contact-light .invalid {
+    font-weight: normal !important;
+    color: rgb(157, 38, 29) !important;
+}
+
+#cw-mod-contact-light input:focus:invalid, 
+#cw-mod-contact-light textarea:focus:invalid,
+#cw-mod-contact-light select:focus:invalid,
+#cw-mod-contact-light input[type=text]:focus:invalid{
+    border-color: #B03535 !important;
+    box-shadow: 0 0 5px #D45252 !important;
+    font-weight: normal !important;
+    color: rgb(157, 38, 29) !important;
+}
+
+/*------------------------------------------------------------------------------
+Buttons
+------------------------------------------------------------------------------*/
+.cw-mod-contact-light-buttons {
+    display:inline-block;
+    width:95%;
+}
+
+.cw-mod-contact-light-buttons .btn-submit{
+    margin-left:auto;
+    margin-right:auto;
+    float:right;
+    margin-top: 5px;
+}
+
+/*------------------------------------------------------------------------------
+Support Developer 
+------------------------------------------------------------------------------*/
+.cw-mod-contact-light-copyrht{
+    text-align: center;
+    display:block;
+    clear:both;
+    font-size: 12px;
+    margin:5px 0 0;
+}
+
+/*------------------------------------------------------------------------------
+Character Count and Calendar
+------------------------------------------------------------------------------*/
+#cw-mod-contact-light .charcount,
+#cw-mod-contact-light .cal-format{ 
+    text-align: right;
+    line-height:0.8em;
+    margin-bottom:5px;
+    width:95%;
+}
+
+#cw-mod-contact-light .charcount{ 
+    text-align: right;
+}
+
+#cw-mod-contact-light .cal-format{ 
+    text-align: left;
+    display:block;
+}
+
+#cw-mod-contact-light .char-counter{ 
+    border-color: #D2DCE1;
+    color: #2382B2; 
+}
+
+#cw-mod-contact-light .charcount label,
+#cw-mod-contact-light .cal-format label{ 
+    font-size: 95%;
+    font-style: italic;
+}
+
+/*------------------------------------------------------------------------------
+Captcha
+------------------------------------------------------------------------------*/
+#recaptcha_area input[type="text"] {
+    display: inline-block;
+    height: auto;
+}
+
+#recaptcha_area, #recaptcha_table { line-height: 0!important;}
+#cw-mod-contact-light .recaptcha {margin-top:10px;}
+
+/*------------------------------------------------------------------------------
+Added in version 0.0.3
+------------------------------------------------------------------------------*/
+
+#cw-mod-contact-light .cal input[type="text"]{
+    width:auto;
+    min-width: 120px;
+}
+
+#cw-mod-contact-light .cal label{
+    width: 100%;
+}
+
+/*#cw-mod-contact-light .btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+    background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe5e5e5', GradientType=0);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    *background-color: #e6e6e6;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    border: 1px solid #bbb;
+    *border: 0;
+    border-bottom-color: #a2a2a2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    *margin-left: .3em;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}*/
+
+#cw-mod-contact-light .cal .btn{
+    font-size:14px;
+}
+
+/*If you are using a template without Bootstrap or if doesn't display an icon for the calendar please uncomment the the CSS below.*/
+/*#cw-mod-contact-light .icon-calendar {
+    background: url("../icons/cw-calendar.png") no-repeat center;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}*/
+
+#cw-mod-contact-light .cal .input-append, 
+#cw-mod-contact-light .cal .input-prepend {margin-bottom: 0px;}
+
+.cwc-msg {width:95%}
+
+/*------------------------------------------------------------------------------
+Added in version 0.0.4
+------------------------------------------------------------------------------*/
+
+/* Google Maps */
+.cwc-map-canvas {
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.cw-mod-contact-map {
+    margin: 15px 5px;
+    border: 1px solid #DDD;
+    width:95%;
+}

@@ -1,0 +1,299 @@
+/**
+ * @author              Steven Palmer
+ * @author url          https://coalaweb.com/
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+*/
+
+/*------------------------------------------------------------------------------
+Layout
+------------------------------------------------------------------------------*/
+.cw-mod-contact-light-clean100,
+.cw-mod-contact-light-clean90,
+.cw-mod-contact-light-clean80,
+.cw-mod-contact-light-clean70,
+.cw-mod-contact-light-clean60,
+.cw-mod-contact-light-clean50 {
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.cw-mod-contact-light-clean100 {width: 100%;}
+.cw-mod-contact-light-clean90 {width: 90%;}
+.cw-mod-contact-light-clean80 {width: 80%;}
+.cw-mod-contact-light-clean70 {width: 70%;}
+.cw-mod-contact-light-clean60 {width: 60%;}
+.cw-mod-contact-light-clean50 {width: 50%;}
+
+#cw-mod-contact-light-clean { 
+    margin:0 0 5px 0;
+    padding:0px 5px;
+}
+
+#cw-mod-contact-light-clean form { 
+    margin:0; 
+    padding:0;
+}
+
+/*------------------------------------------------------------------------------
+Messages 
+------------------------------------------------------------------------------*/
+#cw-mod-contact-light-clean .error, 
+#cw-mod-contact-light-clean .success {
+    clear:both; 
+    display:block; 
+    padding: 5px 5px 5px 35px; 
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); 
+    border-width:1px; 
+    border-style:solid; 
+    border-radius: 0px;  
+    font-size:11px; 
+    margin:5px 0px;
+    line-height:20px;
+}
+
+#cw-mod-contact-light-clean .error{
+    background: url("../icons/cw-alert.png") no-repeat scroll -2px center #FFF0EB;
+    border-color: #FFD7CD; 
+    color: #b94a48; 
+}
+
+#cw-mod-contact-light-clean .success{
+    background: url("../icons/cw-info.png") no-repeat scroll -5px center #EBF5FA;
+    border-color: #D2DCE1;
+    color: #2382B2; 
+}
+
+/*------------------------------------------------------------------------------
+Fields
+------------------------------------------------------------------------------*/
+#cw-mod-contact-light-clean select, 
+#cw-mod-contact-light-clean textarea, 
+#cw-mod-contact-light-clean input[type="text"],
+#cw-mod-contact-light-clean input[type="password"], 
+#cw-mod-contact-light-clean input[type="datetime"], 
+#cw-mod-contact-light-clean input[type="datetime-local"], 
+#cw-mod-contact-light-clean input[type="date"], 
+#cw-mod-contact-light-clean input[type="month"], 
+#cw-mod-contact-light-clean input[type="time"], 
+#cw-mod-contact-light-clean input[type="week"], 
+#cw-mod-contact-light-clean input[type="number"], 
+#cw-mod-contact-light-clean input[type="email"], 
+#cw-mod-contact-light-clean input[type="url"], 
+#cw-mod-contact-light-clean input[type="search"], 
+#cw-mod-contact-light-clean input[type="tel"], 
+#cw-mod-contact-light-clean input[type="color"], 
+#cw-mod-contact-light-clean .uneditable-input {
+    display: inline-block;
+    box-sizing: content-box;
+    width: 95%;
+    padding: 4px 6px;
+    margin-bottom: 9px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 0px;
+    border: 1px solid #DDD;
+    background: none repeat scroll 0% 0% #FFFFFF;
+    box-shadow:none;
+}
+
+#cw-mod-contact-light-clean input[type="file"] {
+    display: inline-block;
+    box-sizing: content-box;
+    width: 95%;
+    padding: 4px 6px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #555;
+    box-shadow:none;
+    line-height: 0;
+}
+
+#cw-mod-contact-light-clean label{
+    margin-bottom:4px;
+    display:inline-block;
+    width:100%;
+}
+
+#cw-mod-contact-light-clean .copyme label, 
+#cw-mod-contact-light-clean .copyme input,
+#cw-mod-contact-light-clean .tos label, 
+#cw-mod-contact-light-clean .tos input{ 
+    display:inline-block;
+    margin:0;
+    font-weight:normal;
+    width:80%;
+}
+
+#cw-mod-contact-light-clean .copyme input,
+#cw-mod-contact-light-clean .tos input{ 
+    vertical-align: middle;
+    margin-left:5px;
+    width:auto;
+}
+
+#cw-mod-contact-light-clean .copyme label,
+#cw-mod-contact-light-clean .tos label{
+    padding: 0px 5px;
+    vertical-align: middle !important;
+}
+
+#cw-mod-contact-light-clean .copyme,
+#cw-mod-contact-light-clean .tos{margin-top:10px;}
+#cw-mod-contact-light-clean textarea {height:auto;}
+
+#cw-mod-contact-light-clean textarea:focus, 
+#cw-mod-contact-light-clean input:focus,
+#cw-mod-contact-light-clean select:focus {
+    border-color:rgba(82, 168, 236, 0.8);
+    font-weight: normal !important;
+    box-shadow: none !important;
+}
+
+#cw-mod-contact-light-clean .invalid{
+    font-weight: normal !important;
+    color: #FF8400 !important;
+    box-shadow: none !important;
+    border-color:#F7A042 !important;
+}
+
+#cw-mod-contact-light-clean input:focus:invalid, 
+#cw-mod-contact-light-clean checkbox:focus:invalid, 
+#cw-mod-contact-light-clean textarea:focus:invalid,
+#cw-mod-contact-light-clean select:focus:invalid{
+    box-shadow: none !important;
+    font-weight: normal !important;
+    color: #FF8400 !important;
+    border-color:#F7A042 !important;
+}
+
+/*------------------------------------------------------------------------------
+Buttons
+------------------------------------------------------------------------------*/
+.cw-mod-contact-light-clean-buttons {
+    display:inline-block;
+    width:95%;
+}
+
+.cw-mod-contact-light-clean-buttons .btn-submit{
+    margin-left:auto;
+    margin-right:auto;
+    float:right;
+    margin-top: 5px;
+}
+
+/*------------------------------------------------------------------------------
+Support Developer 
+------------------------------------------------------------------------------*/
+.cw-mod-contact-light-clean-copyrht{
+    text-align: center;
+    display:block;
+    clear:both;
+    font-size: 12px;
+    margin:5px 0 0;
+}
+
+/*------------------------------------------------------------------------------
+Character Count and Calendar
+------------------------------------------------------------------------------*/
+#cw-mod-contact-light-clean .charcount,
+#cw-mod-contact-light-clean .cal-format{ 
+    text-align: right;
+    line-height:0.8em;
+    margin-bottom:5px;
+    width:95%;
+}
+
+#cw-mod-contact-light-clean .charcount{ 
+    text-align: right;
+}
+
+#cw-mod-contact-light-clean .cal-format{ 
+    text-align: left;
+    display:block;
+}
+
+#cw-mod-contact-light-clean .char-counter{ 
+    border-color: #D2DCE1;
+    color: #2382B2; 
+}
+
+#cw-mod-contact-light-clean .charcount label,
+#cw-mod-contact-light-clean .cal-format label{ 
+    font-size: 95%;
+    font-style: italic;
+}
+
+/*------------------------------------------------------------------------------
+Captcha
+------------------------------------------------------------------------------*/
+#recaptcha_area input[type="text"] {
+    display: inline-block;
+    height: auto;
+}
+
+#recaptcha_area, #recaptcha_table {line-height: 0!important;}
+#cw-mod-contact-light-clean .recaptcha {margin-top:10px;}
+
+/*------------------------------------------------------------------------------
+Added in version 0.0.3
+------------------------------------------------------------------------------*/
+
+#cw-mod-contact-light-clean .cal input[type="text"]{
+    width:auto;
+    min-width: 120px;
+}
+
+#cw-mod-contact-light-clean .cal label{
+    width: 100%;
+}
+
+/*#cw-mod-contact-light-clean .btn {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    text-shadow: none;
+    background: #F5F5F5;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DDD;
+    border-image: none;
+    border-radius: 0px;
+    box-shadow: none;
+}*/
+
+#cw-mod-contact-light-clean .cal .btn{
+    font-size:16px;
+}
+
+/*If you are using a template without Bootstrap or if doesn't display an icon for the calendar please uncomment the the CSS below.*/
+/*#cw-mod-contact-light-clean .icon-calendar {
+    background: url("../icons/cw-calendar.png") no-repeat center;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}*/
+
+#cw-mod-contact-light-clean .cal .input-append, 
+#cw-mod-contact-light-clean .cal .input-prepend {margin-bottom: 0px;}
+
+.cwc-msg {width:95%}
+
+/*------------------------------------------------------------------------------
+Added in version 0.0.4
+------------------------------------------------------------------------------*/
+
+/* Google Maps */
+.cwc-map-canvas {
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.cw-mod-contact-map {
+    margin: 15px 5px;
+    border: 1px solid #DDD;
+    width:95%;
+}

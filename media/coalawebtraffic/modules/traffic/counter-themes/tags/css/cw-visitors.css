@@ -1,0 +1,39 @@
+/**
+ * @author              Steven Palmer
+ * @author url          http://coalaweb.com
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+ */
+
+.cwt-stats-lt-tags, .cwt-stats-ly-tags,
+.cwt-stats-lw-tags, .cwt-stats-lm-tags,
+.cwt-stats-la-tags {
+    background:url(../icons/tags.png) no-repeat;
+}
+
+.cwt-stats-lt-tags, .cwt-stats-ly-tags,
+.cwt-stats-lw-tags, .cwt-stats-lm-tags,
+.cwt-stats-la-tags {
+    padding-left:20px;
+    float:left;
+}
+
+.cwt-stats-lt-tags { background-position: 0px 2px; }
+.cwt-stats-ly-tags { background-position: 0px -64px; }
+.cwt-stats-lw-tags { background-position: 0px -130px; }
+.cwt-stats-lm-tags { background-position: 0px -196px; }
+.cwt-stats-la-tags { background-position: 0px -262px; }
+
+/*ADDED BY JOOMI.IR*/
+[dir="rtl"] .cwt-stats-lt-tags, .cwt-stats-ly-tags,
+[dir="rtl"] .cwt-stats-lw-tags, .cwt-stats-lm-tags,
+[dir="rtl"] .cwt-stats-la-tags {
+    padding-right:22px;
+    float:right;
+    padding-left: none !important;
+}
+[dir="rtl"] .cwt-stats-lt-tags{ background-position: 100% 0px; }
+[dir="rtl"] .cwt-stats-ly-tags { background-position: 100% -66px; }
+[dir="rtl"] .cwt-stats-lw-tags { background-position: 100% -132px; }
+[dir="rtl"] .cwt-stats-lm-tags { background-position: 100% -198px; }
+[dir="rtl"] .cwt-stats-la-tags { background-position: 100% -264px; }

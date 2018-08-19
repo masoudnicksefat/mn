@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" method="upgrade" version="2.5">
+    <name>CoalaWeb Contact fa-IR</name>
+    <version>2017-05-13-11-27-44</version>
+    <creationDate>2017-05-13</creationDate>
+    <author>Steven Palmer</author>
+    <authorEmail>support@coalaweb.com</authorEmail>
+    <authorUrl>https://coalaweb.com</authorUrl>
+    <copyright>Copyright (c) 2017 - Steven Palmer All rights reserved!</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <description>
+        <![CDATA[
+        <h1>CoalaWeb Contact fa-IR</h1>
+        <p>This CoalaWeb language package comes from transifex.com with the help of the amazing translators over at OpenTranslators (http://opentranslators.org)</p>
+        ]]>
+    </description>
+    <fileset>
+        <files folder="admin" target="administrator/language/fa-IR"><filename>fa-IR.com_coalawebcontact.ini</filename>
+<filename>fa-IR.plg_system_cwmailcheck.ini</filename></files>
+        <files folder="frontend" target="language/fa-IR"><filename>fa-IR.mod_coalawebcontact.ini</filename>
+<filename>fa-IR.mod_coalawebcontacttab.ini</filename></files>
+    </fileset>
+</extension>

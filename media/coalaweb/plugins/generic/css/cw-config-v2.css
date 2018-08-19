@@ -1,0 +1,208 @@
+/* Install and Stats Table
+------------------------------------------------------------------------------*/
+
+.coalaweb {
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    color: #4D4D4D;
+}
+
+.coalaweb {
+    border: solid #ccc 1px;
+    background: #fff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    max-width: 100%;    
+    margin: 7px 15px 15px !important;
+}
+
+.coalaweb tr:hover {
+    background: #E8F6FE;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+ 
+.coalaweb tr.row1 {
+    background-color: #F0F0EE;
+}
+
+.coalaweb td, .coalaweb th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px !important;
+    text-align: left;    
+}
+
+.coalaweb th {
+    border-top: none;
+    color: #333 !important;
+    text-shadow: 0px 1px 1px #FFF;
+    border-bottom:4px solid rgb(18, 114, 165) !important;
+}
+
+.coalaweb td:first-child, .coalaweb th:first-child {
+    border-left: none;
+}
+
+.coalaweb th:first-child {
+    -moz-border-radius: 3px 0 0 0;
+    -webkit-border-radius: 3px 0 0 0;
+    border-radius: 3px 0 0 0;
+}
+
+.coalaweb th:last-child {
+    -moz-border-radius: 0 3px 0 0;
+    -webkit-border-radius: 0 3px 0 0;
+    border-radius: 0 3px 0 0;
+}
+
+.coalaweb th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.coalaweb tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 3px;
+    -webkit-border-radius: 0 0 0 3px;
+    border-radius: 0 0 0 3px;
+}
+
+.coalaweb tr:last-child td:last-child {
+    -moz-border-radius: 0 0 3px 0;
+    -webkit-border-radius: 0 0 3px 0;
+    border-radius: 0 0 3px 0;
+}
+
+.coalaweb em, .coalaweb strong {
+    color:#1272A5;
+    font-weight: bold;
+}
+
+/* END Tables
+------------------------------------------------------------------------------*/
+
+/* Messages
+------------------------------------------------------------------------------*/
+/* General message */
+.cw-module p.info, 
+.cw-module p.alert, 
+.cw-module p.vote, 
+.cw-module p.upgrade,
+.cw-module p.forum,
+.cw-message p.info, 
+.cw-message p.alert, 
+.cw-message p.vote, 
+.cw-message p.upgrade,
+.cw-message p.forum {
+    padding:10px 10px 10px 40px;
+    line-height: 18px; 
+    margin: 0px 0px 10px 0px; 
+    border-radius:5px;
+    text-align:left;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    color: #4D4D4D;
+}
+.cw-message p { margin: 10px 20px }
+
+.cw-message p a, .cw-message ul a  { 
+    color: #1272A5; 
+    text-decoration:none; 
+}
+
+.cw-message p a:hover, .cw-message ul a:hover  { 
+    color: #419EC9; 
+    text-decoration:none; 
+}
+
+/* Info Message */
+.cw-module p.info a,
+.cw-module p.info em,
+.cw-message p.info a, 
+.cw-message p.info em { color: #2d7091;}
+.cw-module p.info a:hover,
+.cw-message p.info a:hover { color: rgba(45,112,145,.3);}
+.cw-module p.info,
+.cw-message p.info {
+    background: url("../images/icons/cw-info.png") no-repeat scroll 0 0  #ebf7fd; 
+    border: 1px solid rgba(45,112,145,.3);
+}
+
+/* Forum Message */
+.cw-module p.forum a,
+.cw-module p.forum em,
+.cw-message p.forum a, 
+.cw-message p.forum em { color: #e28327;}
+.cw-module p.forum a:hover,
+.cw-message p.forum a:hover { color: rgba(226,131,39,.3);}
+.cw-module p.forum,
+.cw-message p.forum {
+    background: url("../images/icons/cw-forum.png") no-repeat scroll 0 0  #fffceb; 
+    border: 1px solid rgba(226,131,39,.3);
+}
+
+/* Alert Message */
+.cw-module p.alert a,
+.cw-module p.alert em,
+.cw-message p.alert a, 
+.cw-message p.alert em { color: #B1191C;}
+.cw-module p.vote a:hover,
+.cw-message p.alert a:hover { color: #D85863;}
+.cw-module p.alert,
+.cw-message p.alert {
+    background: url("../images/icons/cw-alert.png") no-repeat scroll 0 0 #fff1f0;
+    border: 1px solid rgba(216,80,48,.3);
+}
+
+/* Vote Message */
+.cw-module p.vote a,
+.cw-module p.vote em,
+.cw-message p.vote a, 
+.cw-message p.vote em { color:#268413; }
+.cw-module p.vote a:hover,
+.cw-message p.vote a:hover {color:#b0bf7f;}
+.cw-module p.vote,
+.cw-message p.vote {
+    background: url("../images/icons/cw-vote.png") no-repeat scroll 0 0  #F2fae3; 
+    border: 1px solid rgba(101,159,19,.3);
+}
+
+/* Upgrade message*/
+.cw-module p.upgrade a,
+.cw-module p.upgrade em,
+.cw-message p.upgrade a, 
+.cw-message p.upgrade em  { color:#CE6A23; }
+.cw-module p.upgrade a:hover,
+.cw-message p.upgrade a:hover {color:#E2AB53;}
+.cw-module p.upgrade,
+.cw-message p.upgrade {
+    background: url("../images/icons/cw-forum.png") no-repeat scroll 0 0  #FFFAE6; 
+    border: 1px solid #FAE6BE;
+}
+
+/* END Messages
+------------------------------------------------------------------------------*/
+
+/* Start Pro
+------------------------------------------------------------------------------*/
+.cw-pro {margin-top:5px;}
+
+.cw-pro code {
+    border: none;
+    background:none;
+    padding-top:5px;
+    font-size:90%;
+}
+
+/* END Pro
+------------------------------------------------------------------------------*/

@@ -1,0 +1,29 @@
+/*! UIkit 2.27.1 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
+/* ========================================================================
+   Component: Placeholder
+ ========================================================================== */
+.cw-placeholder {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px dashed #ddd;
+  background: #fafafa;
+  color: #444;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .cw-placeholder {
+  margin-top: 15px;
+}
+/*
+ * Remove margin from the last-child
+ */
+.cw-placeholder > :last-child {
+  margin-bottom: 0;
+}
+/* Modifier: `cw-placeholder-large`
+ ========================================================================== */
+.cw-placeholder-large {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}

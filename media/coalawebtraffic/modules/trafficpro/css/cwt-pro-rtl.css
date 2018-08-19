@@ -1,0 +1,56 @@
+/**
+ * @author              Steven Palmer
+ * @author url          http://coalaweb.com
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+ */
+
+/* Fix button groups */
+.cw-button-group > .cw-button:first-child, .cw-button-group > div:first-child .cw-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-right-color: rgba(0,0,0,0.1) !important;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.cw-button-group > .cw-button:last-child, .cw-button-group > div:last-child .cw-button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-color: rgba(0,0,0,0.1) !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.uk-button-group > .uk-button:first-child, .uk-button-group > div:first-child .uk-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-right-color: rgba(0,0,0,0.1) !important;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.uk-button-group > .uk-button:last-child, .uk-button-group > div:last-child .uk-button {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-right-color: rgba(0,0,0,0.1) !important;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+/*ADDED BY JOOMI.IR*/
+
+.cw-width-1-1 .cw-margin-bottom .cw-button-group > .cw-button:first-child, .cw-button-group > div:first-child .cw-button {
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	border-left-color: rgba(0,0,0,0.1) !important;
+	border-top-left-radius: 4px !important;
+	border-bottom-left-radius: 4px !important;
+}
+.cw-width-1-1 .cw-margin-bottom .cw-button-group > .cw-button:last-child, .cw-button-group > div:last-child .cw-button {
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-right-color: rgba(0,0,0,0.1) !important;
+	border-top-right-radius: 4px !important;
+	border-bottom-right-radius: 4px !important;
+}

@@ -1,0 +1,394 @@
+/**
+ * @author              Steven Palmer
+ * @author url          http://coalaweb.com
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+*/
+
+/* cpanel-v2 Icon Styling
+------------------------------------------------------------------------------*/
+
+#cpanel-v2 img, .cpanel-v2 img {
+    margin: 0 auto;
+    padding: 14px 0;
+}
+
+.cpanel-v2 div.icon, #cpanel-v2 div.icon {
+    float: left;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+.cpanel-v2 div.icon a, #cpanel-v2 div.icon a {
+    background-position: -30px center;
+    border-radius: 5px;
+    display: block;
+    float: left;
+    height: 97px;
+    padding: 5px;
+    text-decoration: none;
+    transition-property: none;
+    vertical-align: middle;
+    width: 108px;
+    color: #FFFFFF !important;
+    font: bold 12px Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+}
+
+.cpanel-v2 div.icon a.orange-light,
+#cpanel-v2 div.icon a.orange-light{
+    background-color: #fec536;
+}
+
+.cpanel-v2 div.icon a.orange-dark,
+#cpanel-v2 div.icon a.orange-dark{
+    background-color: #f59d1f;
+}
+
+.cpanel-v2 div.icon a.blue-light,
+#cpanel-v2 div.icon a.blue-light{
+    background-color: #36c0f1;
+}
+
+.cpanel-v2 div.icon a.blue-dark,
+#cpanel-v2 div.icon a.blue-dark{
+    background-color: #2481bc;
+}
+
+.cpanel-v2 div.icon a.red-light,
+#cpanel-v2 div.icon a.red-light{
+    background-color: #e84c3d;
+}
+
+.cpanel-v2 div.icon a.red-dark,
+#cpanel-v2 div.icon a.red-dark{
+    background-color: #d5562b;
+}
+
+.cpanel-v2 div.icon a.green-light,
+#cpanel-v2 div.icon a.green-light{
+    background-color: #a4c540;
+}
+
+.cpanel-v2 div.icon a.green-dark,
+#cpanel-v2 div.icon a.green-dark{
+    background-color: #4aba70;
+}
+
+.cpanel-v2 div.icon a.aqua-light,
+#cpanel-v2 div.icon a.aqua-light{
+    background-color: #66c8c9;
+}
+
+.cpanel-v2 div.icon a.aqua-dark,
+#cpanel-v2 div.icon a.aqua-dark{
+    background-color: #09b79e;
+}
+
+.cpanel-v2 div.icon a.purple-light,
+#cpanel-v2 div.icon a.purple-light{
+    background-color: #7778b0;
+}
+
+.cpanel-v2 div.icon a.purple-dark,
+#cpanel-v2 div.icon a.purple-dark{
+    background-color: #9958a8;
+}
+
+.cpanel-v2 div.icon a.pink-light,
+#cpanel-v2 div.icon a.pink-light{
+    background-color: #f27271;
+}
+
+#cpanel-v2 div.icon a:hover, #cpanel-v2 div.icon a:focus, #cpanel-v2 div.icon a:active,
+.cpanel-v2 div.icon a:hover, .cpanel-v2 div.icon a:focus, .cpanel-v2 div.icon a:active {
+    background-position: 0 center !important;
+    border-radius: 5px 5px 5px 5px !important;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1) inset, -5px -5px 10px rgba(0, 0, 0, 0.05) inset !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.cpanel-v2 div.icon span, #cpanel-v2 div.icon span {
+    display: block;
+    text-align: center;
+}
+
+/* cpanel-v2 Layout Styling
+------------------------------------------------------------------------------*/
+#cpanel-v2 {}
+
+/* END cpanel-v2
+------------------------------------------------------------------------------*/
+
+/* Install and Stats Table
+------------------------------------------------------------------------------*/
+
+.coalaweb {
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    color: #4D4D4D;
+}
+
+.coalaweb {
+    border: solid #ccc 1px;
+    background: #fff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    max-width: 100%;
+    margin: 7px 15px 15px !important;
+}
+
+.coalaweb tr:hover {
+    background: #E8F6FE;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.coalaweb tr.row1 {
+    background-color: #F0F0EE;
+}
+
+.coalaweb td, .coalaweb th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px !important;
+    text-align: left;
+}
+
+.coalaweb th {
+    border-top: none;
+    color: #333 !important;
+    text-shadow: 0px 1px 1px #FFF;
+    border-bottom:4px solid rgb(18, 114, 165) !important;
+}
+
+.coalaweb td:first-child, .coalaweb th:first-child {
+    border-left: none;
+}
+
+.coalaweb th:first-child {
+    -moz-border-radius: 3px 0 0 0;
+    -webkit-border-radius: 3px 0 0 0;
+    border-radius: 3px 0 0 0;
+}
+
+.coalaweb th:last-child {
+    -moz-border-radius: 0 3px 0 0;
+    -webkit-border-radius: 0 3px 0 0;
+    border-radius: 0 3px 0 0;
+}
+
+.coalaweb th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.coalaweb tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 3px;
+    -webkit-border-radius: 0 0 0 3px;
+    border-radius: 0 0 0 3px;
+}
+
+.coalaweb tr:last-child td:last-child {
+    -moz-border-radius: 0 0 3px 0;
+    -webkit-border-radius: 0 0 3px 0;
+    border-radius: 0 0 3px 0;
+}
+
+.coalaweb em, .coalaweb strong {
+    color:#1272A5;
+    font-weight: bold;
+}
+
+/* END Tables
+------------------------------------------------------------------------------*/
+
+/* Messages
+------------------------------------------------------------------------------*/
+/* General message */
+.cw-slider p.info,
+.cw-slider p.alert,
+.cw-slider p.vote,
+.cw-slider p.upgrade,
+.cw-slider p.forum,
+.cw-message p.info,
+.cw-message p.alert,
+.cw-message p.vote,
+.cw-message p.upgrade,
+.cw-message p.forum {
+    padding:10px 10px 10px 40px;
+    line-height: 18px;
+    margin: 0px 0px 10px 0px;
+    border-radius:5px;
+    text-align:left;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    color: #4D4D4D;
+}
+.cw-message p { margin: 10px 20px }
+
+.cw-message p a, .cw-message ul a  {
+    color: #1272A5;
+    text-decoration:none;
+}
+
+.cw-message p a:hover, .cw-message ul a:hover  {
+    color: #419EC9;
+    text-decoration:none;
+}
+
+/* Info Message */
+.cw-slider p.info a,
+.cw-slider p.info em,
+.cw-message p.info a,
+.cw-message p.info em { color: #2d7091;}
+.cw-slider p.info a:hover,
+.cw-message p.info a:hover { color: rgba(45,112,145,.3);}
+.cw-slider p.info,
+.cw-message p.info {
+    background: url("../images/icons/cw-info.png") no-repeat scroll 0 0  #ebf7fd;
+    border: 1px solid rgba(45,112,145,.3);
+}
+
+/* Forum Message */
+.cw-slider p.forum a,
+.cw-slider p.forum em,
+.cw-message p.forum a,
+.cw-message p.forum em { color: #e28327;}
+.cw-slider p.forum a:hover,
+.cw-message p.forum a:hover { color: rgba(226,131,39,.3);}
+.cw-slider p.forum,
+.cw-message p.forum {
+    background: url("../images/icons/cw-forum.png") no-repeat scroll 0 0  #fffceb;
+    border: 1px solid rgba(226,131,39,.3);
+}
+
+/* Alert Message */
+.cw-slider p.alert a,
+.cw-slider p.alert em,
+.cw-message p.alert a,
+.cw-message p.alert em { color: #B1191C;}
+.cw-slider p.vote a:hover,
+.cw-message p.alert a:hover { color: #D85863;}
+.cw-slider p.alert,
+.cw-message p.alert {
+    background: url("../images/icons/cw-alert.png") no-repeat scroll 0 0 #fff1f0;
+    border: 1px solid rgba(216,80,48,.3);
+}
+
+/* Vote Message */
+.cw-slider p.vote a,
+.cw-slider p.vote em,
+.cw-message p.vote a,
+.cw-message p.vote em { color:#268413; }
+.cw-slider p.vote a:hover,
+.cw-message p.vote a:hover {color:#b0bf7f;}
+.cw-slider p.vote,
+.cw-message p.vote {
+    background: url("../images/icons/cw-vote.png") no-repeat scroll 0 0  #F2fae3;
+    border: 1px solid rgba(101,159,19,.3);
+}
+
+/* Upgrade message*/
+.cw-slider p.upgrade a,
+.cw-slider p.upgrade em,
+.cw-message p.upgrade a,
+.cw-message p.upgrade em  { color:#CE6A23; }
+.cw-slider p.upgrade a:hover,
+.cw-message p.upgrade a:hover {color:#E2AB53;}
+.cw-slider p.upgrade,
+.cw-message p.upgrade {
+    background: url("../images/icons/cw-forum.png") no-repeat scroll 0 0  #FFFAE6;
+    border: 1px solid #FAE6BE;
+}
+
+#permissions-sliders .pane-toggler-down span.level,
+#permissions-sliders .pane-toggler span.level,
+#permissions-sliders .pane-sliders{
+    background-image: none !important;
+    margin:0px;
+}
+
+/* END Messages
+------------------------------------------------------------------------------*/
+
+/* Buttons
+------------------------------------------------------------------------------*/
+.cw-slider .btn-primary,
+.cw-slider .btn-warning,
+.cw-slider .btn-danger,
+.cw-slider .btn-success,
+.cw-slider .btn-info,
+.cw-slider .btn-inverse {
+    color: #fff !important;
+}
+
+.cw-slider .btn-primary:hover,
+.cw-slider .btn-warning:hover,
+.cw-slider .btn-danger:hover,
+.cw-slider .btn-success:hover,
+.cw-slider .btn-info:hover,
+.cw-slider .btn-inverse:hover {
+    color: #fff;
+}
+
+.cw-slider .btn-primary:focus,
+.cw-slider .btn-warning:focus,
+.cw-slider .btn-danger:focus,
+.cw-slider .btn-success:focus,
+.cw-slider .btn-info:focus,
+.cw-slider .btn-inverse:focus {
+    color: #fff;
+}
+
+.cw-slider .btn-primary:active,
+.cw-slider .btn-warning:active,
+.cw-slider .btn-danger:active,
+.cw-slider .btn-success:active,
+.cw-slider .btn-info:active,
+.cw-slider .btn-inverse:active {
+    color: #fff;
+}
+
+/* END Buttons
+------------------------------------------------------------------------------*/
+
+/* Start Pro
+------------------------------------------------------------------------------*/
+.cw-pro {margin-top:5px;}
+
+.cw-pro code {
+    border: none;
+    background:none;
+    padding-top:5px;
+    font-size:90%;
+}
+
+/* END Pro
+------------------------------------------------------------------------------*/
+
+/*ADDED BY JOOMI.IR*/
+[dir="rtl"] .cw-slider p.info,[dir="rtl"] .cw-message p.info,[dir="rtl"] .cw-slider p.forum,[dir="rtl"] .cw-message p.forum,[dir="rtl"] .cw-slider p.vote,[dir="rtl"] .cw-message p.vote {
+	background-position: 100% 0;
+}
+[dir="rtl"] .cw-slider p.info,[dir="rtl"] .cw-slider p.alert,[dir="rtl"] .cw-slider p.vote,[dir="rtl"] .cw-slider p.upgrade,[dir="rtl"] .cw-slider p.forum,[dir="rtl"] .cw-message p.info, .cw-message p.alert,
+[dir="rtl"] .cw-message p.vote,[dir="rtl"] .cw-message p.upgrade,[dir="rtl"] .cw-message p.forum {
+	padding: 10px 40px 10px 10px;
+  text-align: right;
+}
+[dir="rtl"] .cpanel-v2 div.icon a,
+[dir="rtl"]  #cpanel-v2 div.icon a {
+	font: normal 12px tahoma,Helvetica,sans-serif;
+}

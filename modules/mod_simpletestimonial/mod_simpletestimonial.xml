@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_simpletestimonial</name>
+	<author>Masoud</author>
+	<creationDate>2016</creationDate>
+	<copyright>Copyright (C) 2016 - 2020 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>masoud.nicksefat@yahoo.com</authorEmail>
+	<authorUrl>mastermedia.ir</authorUrl>
+	<version>1.0.0</version>
+	<description>this is amazing simple testimonial!</description>
+	<files>
+		<filename module="mod_simpletestimonial">mod_simpletestimonial.php</filename>
+		<filename>mod_simpletestimonial.xml</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field 
+					name="catId" 
+					type="category" 
+					extension="com_content" 
+					label="Select a category" 
+					description="یک مجموعه انتخاب کنید"
+					default=""
+					multiple="true"
+				/>
+
+				
+				<field
+					name="contentPerRow"
+					type="number"
+					label="تعداد مطلب در هر ستون"
+					description="تعداد مطالب که می خواهبد در هر ستون قرار بگیرد وارد کنید"
+				/>
+				
+				<field
+					name="count"
+					type="number"
+					label="عدد مورد نظر شما"
+					description="برای پیکربندی نوع html استفاده می شود."
+				/>
+				
+				<field 
+					name="onlyFeatureContent" 
+					type="radio" 
+					default="0" 
+					label="نمایش تنها مطالب ویژه" 
+					description="" 
+					class="btn-group btn-group-yesno">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="layout" 
+					type="modulelayout" 
+					label="JFIELD_ALT_LAYOUT_LABEL" 
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" 
+				/>
+             
+			 	<field 
+					name="testimonialBackgroundColor" 
+					type="color" 
+					default="#eee"
+					label="MOD_SIMPLE_TESTIMONIAL_BACKGROUND_COLOR_LABEL"
+					description="MOD_SIMPLE_TESTIMONIAL_BACKGROUND_COLOR_DESC" 
+				/>
+				
+				<field 
+					name="testimonialFontColor" 
+					type="color" 
+					default="#000"
+					label="MOD_SIMPLE_TESTIMONIAL_FONT_COLOR_LABEL"
+					description="MOD_SIMPLE_TESTIMONIAL_FONT_COLOR_DESC" 
+				/>
+				
+			 </fieldset> 
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="system" method="upgrade">
+    <name>PLG_CWTRAFFICCOUNT</name>
+    <creationDate>2017-01-26</creationDate>
+    <author>Steven Palmer</author>
+    <authorEmail>support@coalaweb.com</authorEmail>
+    <authorUrl>http://coalaweb.com</authorUrl>
+    <copyright>Copyright (c) 2017 Steven Palmer All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.1.0</version>
+    <description>PLG_CWTRAFFICCOUNT_DESC</description>
+        
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_cwtrafficcount.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_cwtrafficcount.sys.ini</language>
+    </languages>
+        
+    <files>
+        <filename plugin="cwtrafficcount">cwtrafficcount.php</filename>
+        <folder>assets</folder>
+        <folder>language</folder>
+    </files>
+
+    <config>
+        <fields 
+            name="params" 
+            addfieldpath="plugins/system/cwgears/fields">
+            
+            <fieldset 
+                name="GENERAL"
+                label="PLG_CWTRAFFICCOUNT_SETTINGS" >
+                
+                <field 
+                    name="css_import" 
+                    type="css"/>
+                
+                <field 
+                    name="basic_info"
+                    type="info"
+                    default=""
+                    label="PLG_CWTRAFFICCOUNT_SETTINGS_MESSAGE"/>
+        
+            </fieldset>
+            
+            <fieldset 
+                name="VERSION"
+                label="PLG_CWTRAFFICCOUNT_TITLE_VERSION">
+                
+                <field 
+                    name="version_info"
+                    type="version"
+                    label="com_coalawebtraffic"/>
+            </fieldset>
+            
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.5" method="upgrade" client="administrator">
+    <name>MOD_CWTRAFFICSTATS</name>
+    <creationDate>2016-10-06</creationDate>
+    <author>Steven Palmer</author>
+    <authorEmail>support@coalaweb.com</authorEmail>
+    <authorUrl>http://coalaweb.com</authorUrl>
+    <copyright>Copyright (c) 2016 Steven Palmer All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.0.6</version>
+    <description>MOD_CWTRAFFICSTATS_DESC</description>
+
+    <files>
+        <filename module="mod_cwtrafficstats">mod_cwtrafficstats.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_cwtrafficstats.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_cwtrafficstats.sys.ini</language>
+    </languages>
+
+    <!-- HELP FILE -->
+    <help url="MOD_CWTRAFFICSTATS_HELP_URL" />
+    
+    <config>
+        <fields 
+            name="params" 
+            addfieldpath="/plugins/system/cwgears/fields">
+                
+            <fieldset
+                name="GENERAL"
+                label="MOD_CWTRAFFICSTATS_GENERAL_TAB">
+            
+                            <field 
+                    name="css_import" 
+                    type="css"/>
+                            
+                <field
+                    name="s_about"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICSTATS_SHOW_ABOUT_LABEL"
+                    description="MOD_CWTRAFFICSTATS_SHOW_ABOUT_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                
+                <field
+                    name="s_stats"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICSTATS_SHOW_STATS_LABEL"
+                    description="MOD_CWTRAFFICSTATS_SHOW_STATS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                
+                <field
+                    name="s_release"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICSTATS_SHOW_RELEASE_LABEL"
+                    description="MOD_CWTRAFFICSTATS_SHOW_RELEASE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                
+            </fieldset> 
+                
+            <fieldset 
+                name="advanced">
+                
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="itemid">
+                    <option value="itemid"></option>
+                </field>
+                
+            </fieldset>
+            
+            <fieldset 
+                name="VERSION"
+                label="MOD_CWTRAFFICSTATS_TITLE_VERSION">
+                
+                <field 
+                    name="version_info"
+                    type="version"
+                    label="com_coalawebtraffic"/>
+                
+            </fieldset>
+            
+        </fields>
+    </config>
+</extension>

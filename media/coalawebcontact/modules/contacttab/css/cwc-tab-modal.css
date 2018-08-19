@@ -1,0 +1,18 @@
+/**
+ * @author              Steven Palmer
+ * @author url          https://coalaweb.com/
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+ */
+
+.cwc-contact-tab-modal.left {left: 0px;}
+.cwc-contact-tab-modal.right {right: 0px;}
+
+.cwc-contact-tab-modal {
+    position:fixed;
+    z-index:1000;
+}
+
+.cwc-contact-tab-modal > .cw-button {
+    border-radius: 0px;
+}

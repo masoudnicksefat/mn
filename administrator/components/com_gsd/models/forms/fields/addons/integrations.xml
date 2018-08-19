@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addons>
+    <addon name="content"
+        label="Joomla! Articles"
+        description="Add Structured Data to Joomla! Articles"
+        docalias="the-joomla-content-integration"
+        proonly="false"
+    />
+    <addon name="k2"
+        label="K2"
+        description="Add Structured Data to K2 items."
+        docalias="the-k2-integration"
+    />
+    <addon name="easyblog"
+        label="EasyBlog"
+        description="Add Structured Data to EasyBlog posts."
+        docalias="the-easyblog-integration"
+    />
+    <addon name="rsblog"
+        label="RSBlog"
+        description="Add Structured Data to RSBlog posts."
+        docalias="the-rsblog-integration"
+    />
+    <addon name="sppagebuilder"
+        label="SP Page Builder"
+        description="Add Structured Data to SP Page Builder pages."
+        docalias="the-sppagebuilder-integration"
+    />
+    <addon name="hikashop"
+        label="HikaShop"
+        description="Add Structured Data to HikaShop products. It supports Auto-Mode (Check Plugin Options)."
+        docalias="the-hikashop-integration"
+    />
+    <addon name="jshopping"
+        label="JShopping"
+        description="Add Structured Data to JShopping products. It supports Auto-Mode (Check Plugin Options)."
+        docalias="the-jshopping-integration"
+    />
+    <addon name="virtuemart"
+        label="VirtueMart"
+        description="Add Structured Data to VirtueMart products. It supports Auto-Mode (Check Plugin Options)."
+        docalias="the-virtuemart-integration"
+    />
+    <addon name="zoo"
+        label="Zoo"
+        description="Add Structured Data to Zoo items."
+        docalias="the-zoo-integration"
+    />
+    <addon name="menus"
+        label="Menu Manager"
+        description="Add Structured Data to Menu Manager Items."
+        docalias="the-menu-integration"
+    />
+    <!-- Comin Soon -->
+    <addon name="eventbooking"
+        label="Event Booking"
+        description="Add Structured Data to Event Booking items."
+        comingsoon="true"
+    />
+    <addon name="jevents"
+        label="JEvents"
+        description="Add Structured Data to JEvents items."
+        comingsoon="true"
+    />
+    <addon name="djclassifieds"
+        label="DJ Classifieds"
+        description="Add Structured Data to DJ Classifieds items."
+        comingsoon="true"
+    />
+    <addon name="rsdirectory"
+        label="RSDirectory"
+        description="Add Structured Data to RSDirectory items."
+        comingsoon="true"
+    />
+</addons>

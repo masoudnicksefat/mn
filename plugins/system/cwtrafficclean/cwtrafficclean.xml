@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="system" method="upgrade">
+    <name>PLG_CWTRAFFICCLEAN</name>
+    <creationDate>2017-01-26</creationDate>
+    <author>Steven Palmer</author>
+    <authorEmail>support@coalaweb.com</authorEmail>
+    <authorUrl>http://coalaweb.com</authorUrl>
+    <copyright>Copyright (c) 2017 Steven Palmer All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.1.0</version>
+    <description>PLG_CWTRAFFICCLEAN_DESC</description>
+        
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_cwtrafficclean.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_cwtrafficclean.sys.ini</language>
+    </languages>
+        
+    <files>
+        <filename plugin="cwtrafficclean">cwtrafficclean.php</filename>
+        <folder>assets</folder>
+        <folder>language</folder>
+    </files>
+        
+    <config>
+        <fields 
+            name="params" 
+            addfieldpath="plugins/system/cwgears/fields">
+            
+            <fieldset 
+                name="GENERAL"
+                label="PLG_CWTRAFFICCLEAN_SETTINGS" >
+                
+                <field 
+                    name="css_import" 
+                    type="css"/>
+                
+                <field 
+                    name="basic_info"
+                    type="info"
+                    default=""
+                    label="PLG_CWTRAFFICCLEAN_SETTINGS_MESSAGE"/>
+        
+            </fieldset>
+            
+            <fieldset 
+                name="VERSION"
+                label="PLG_CWTRAFFICCLEAN_TITLE_VERSION">
+                
+                <field 
+                    name="version_info"
+                    type="version"
+                    label="com_coalawebtraffic"/>
+            </fieldset>
+            
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2" method="upgrade">
+    <name>COM_COALAWEBTRAFFIC</name>
+    <creationDate>2017-01-26</creationDate>
+    <author>Steven Palmer</author>
+    <authorEmail>support@coalaweb.com</authorEmail>
+    <authorUrl>http://coalaweb.com</authorUrl>
+    <copyright>Copyright (c) 2017 Steven Palmer All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.1.0</version>
+    <description>COM_COALAWEBTRAFFIC_DESCRIPTION</description>
+ 
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update> <!-- Runs on update; New in 1.6 -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+ 
+    <media destination="coalawebtraffic" folder="media/coalawebtraffic">
+        <filename>index.html</filename>
+        <folder>components</folder>
+        <folder>modules</folder>
+        <folder>plugins</folder>
+    </media>
+    
+    <administration>
+        <menu img ="../media/coalawebtraffic/components/traffic/icons/icon-16-cwt.png">COM_COALAWEBTRAFFIC</menu>
+        <files folder="administrator">
+            <!-- Admin Main File Copy Section -->
+            <filename>index.html</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <filename>coalawebtraffic.php</filename>
+            <filename>controller.php</filename>
+            <filename>version.php</filename>
+            <folder>assets</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+        </files>
+ 
+        <languages folder="administrator/">
+            <language tag="en-GB">language/en-GB/en-GB.com_coalawebtraffic.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_coalawebtraffic.sys.ini</language>
+        </languages>
+    </administration>
+ 
+    <!-- Update Server -->
+    <updateservers>
+        <server type="extension" priority="1" name="CoalaWeb Traffic Update">http://cdn.coalaweb.com/updates/cw-traffic-pro.xml</server>
+    </updateservers>
+        
+    <!-- Installation / Uninstallation Script File -->
+    <scriptfile>script.coalawebtraffic.php</scriptfile>
+        
+</extension>

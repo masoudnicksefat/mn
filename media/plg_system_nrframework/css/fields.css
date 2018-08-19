@@ -1,0 +1,87 @@
+/**
+ * @author          Tassos Marinos <info@tassos.gr>
+ * @link            http://www.tassos.gr
+ * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
+*/
+
+.nr-well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #F0F0F0;
+    border: 1px solid #F0F0F0;
+    border-radius: 3px;
+}
+.nr-well .well-desc {
+	margin-bottom:25px;
+	color: #555;
+}
+.nr-well h4 {
+	font-size:16px;
+    margin-top:0;
+}
+.nr-well > .control-group:last-child {
+    margin-bottom:0;
+}
+.nr-well .controls:empty, .nr-well .control-label:empty, .nr-well .control-group:empty {
+    display:none;
+}
+
+.well-note {
+    font-size: 11px;
+    line-height: 1.5;
+    opacity: 0.8;
+    text-indent: -5px;
+}
+
+/* Field: nr_inline */
+.inline-control-group {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+}
+.inline-control-group label, .inline-control-group input {
+	margin:0 !important;
+	padding:0;
+}
+.inline-control-group .controls {
+    margin-left: 0 !important;
+    line-height: 1;
+}
+.inline-control-group .control-label {
+    padding: 0 10px 0 0 !important;
+}
+.inline-control-group fieldset {
+	padding:0 !important;
+}
+.inline-control-group .control-group {
+    align-items: center;
+    display: flex;
+    margin: 5px !important;
+}
+
+/* Field: nr_inline - Timetable */
+.inline-control-group.timetable .control-group {
+	width: 100px;
+}
+.inline-control-group.timetable .control-group:nth-child(2) .control-label {
+    order: 1;
+    padding-left: 7px !important;
+}
+
+/* General Field Classes */
+
+.input-xmini {
+    width: 30px;
+}
+
+.input-flex {
+    display:flex;
+    margin:0 -5px;
+}
+
+.input-flex .input-flex-item {
+    padding:0 5px;
+}

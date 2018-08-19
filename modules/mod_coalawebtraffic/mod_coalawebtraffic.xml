@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.2" method="upgrade" client="site">
+    <name>MOD_COALAWEBTRAFFIC</name>
+    <creationDate>2017-01-26</creationDate>
+    <author>Steven Palmer</author>
+    <authorEmail>support@coalaweb.com</authorEmail>
+    <authorUrl>http://coalaweb.com</authorUrl>
+    <copyright>Copyright (c) 2017 Steven Palmer All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.1.0</version>
+    <description>MOD_COALAWEBTRAFFIC_DESCRIPTION</description>
+
+    <files>
+        <filename module="mod_coalawebtraffic">mod_coalawebtraffic.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_coalawebtraffic.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_coalawebtraffic.sys.ini</language>
+    </languages>
+
+    <!-- HELP FILE -->
+    <help url="MOD_CWTRAFFIC_HELP_URL" />
+
+    <config>
+        <fields 
+            name="params" 
+            addfieldpath="/plugins/system/cwgears/fields">
+                
+            <fieldset
+                name="GENERAL"
+                label="MOD_CWTRAFFIC_GENERAL_SEPARATOR">
+                
+                <field 
+                    name="css_import" 
+                    type="css"/>
+                
+                <field
+                    type="spacer" 
+                    name="digital_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_DIGITAL"
+                    class="cw_label" /> 
+                
+                <field
+                    name="s_digital"
+                    type="radio"
+                    default="0"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_DIGITAL_LABEL"
+                    description="MOD_CWTRAFFIC_SHOW_DIGITAL_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                 
+                <field 
+                    name="digit_number" 
+                    default="5" 
+                    type="text" 
+                    label="MOD_CWTRAFFIC_DIGIT_NUM_LABEL"
+                    description="MOD_CWTRAFFIC_DIGIT_NUM_DESC"/>
+                
+                <field 
+                    name="digit_theme" 
+                    type="folderlist" 
+                    default="black-flip"
+                    hide_default="false"
+                    hide_none="true"
+                    directory="media/coalawebtraffic/modules/traffic/digit-themes" 
+                    label="MOD_CWTRAFFIC_DIGIT_THEME_LABEL"
+                    description="MOD_CWTRAFFIC_DIGIT_THEME_DESC"/>
+
+                <field
+                    type="spacer" 
+                    name="individual_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_INDIVIDUAL"
+                    class="cw_label" /> 
+                    
+                <field
+                    name="s_individual"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_INDIVIDUAL_LABEL"
+                    description="MOD_CWTRAFFIC_SHOW_INDIVIDUAL_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="select_theme"
+                    type="folderlist" 
+                    default="users"
+                    hide_default="false"
+                    hide_none="true"
+                    directory="media/coalawebtraffic/modules/traffic/counter-themes" 
+                    label="MOD_CWTRAFFIC_SELECT_ICONTHEME_LABEL"
+                    description="MOD_CWTRAFFIC_SELECT_ICONTHEME_DESC"/>
+                
+                <field
+                    name="hline"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_HLINE_OPT"
+                    description="MOD_CWTRAFFIC_SHOW_HLINE_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>  
+                
+                <field
+                    name="s_today"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_TODAY"
+                    description="MOD_CWTRAFFIC_SHOW_TODAY_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="today"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_TODAY_OPT"
+                    description="MOD_CWTRAFFIC_TODAY_DESC"/>
+                        
+                <field
+                    name="s_yesterday"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_YESTERDAY"
+                    description="MOD_CWTRAFFIC_SHOW_YESTERDAY_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="yesterday"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_YESTERDAY_OPT"
+                    description="MOD_CWTRAFFIC_YESTERDAY_DESC"/>
+                        
+                <field
+                    name="s_week"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_WEEK"
+                    description="MOD_CWTRAFFIC_SHOW_WEEK_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="week"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_WEEK_OPT"
+                    description="MOD_CWTRAFFIC_WEEK_DESC"/>
+                        
+                <field
+                    name="s_month"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_MONTH"
+                    description="MOD_CWTRAFFIC_SHOW_MONTH_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field 
+                    name="month"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_MONTH_OPT"
+                    description="MOD_CWTRAFFIC_MONTH_DESC"/>
+                        
+                <field
+                    name="s_all"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_TOTAL"
+                    description="MOD_CWTRAFFIC_SHOW_TOTAL_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field 
+                    name="all"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_TOTAL_OPT"
+                    description="MOD_CWTRAFFIC_TOTAL_DESC"/>             
+                    
+            </fieldset>
+                
+            <fieldset
+                name="LAYOUT"
+                label="MOD_CWTRAFFIC_LAYOUT_SEPARATOR">
+                 
+                <field
+                    name="counter_width"
+                    type="list"
+                    default="100"
+                    label="MOD_CWTRAFFIC_COUNTER_WIDTH_LABEL"
+                    description="MOD_CWTRAFFIC_COUNTER_WIDTH_DESC">
+                    <option value="100">100%</option>
+                    <option value="90">90%</option>
+                    <option value="80">80%</option>
+                    <option value="70">70%</option>
+                    <option value="60">60%</option>
+                    <option value="50">50%</option>
+                </field>       
+                
+                <field
+                    name="css_width"
+                    type="list"
+                    default="100"
+                    label="MOD_CWTRAFFIC_MODWIDTH"
+                    description="MOD_CWTRAFFIC_MODWIDTHDESC">
+                    <option value="100">100%</option>
+                    <option value="90">90%</option>
+                    <option value="80">80%</option>
+                    <option value="70">70%</option>
+                    <option value="60">60%</option>
+                    <option value="50">50%</option>
+                </field>
+                    
+                <field
+                    name="layout"
+                    type="list"
+                    default="default"
+                    class="chzn-color-state"
+                    label="MOD_CWTRAFFIC_LAYOUT"
+                    description="MOD_CWTRAFFIC_LAYOUTDESC">
+                    <option value="default">Default</option>
+                    <option value="horizontal">Horizontal</option>
+                    <option value="compact">Compact</option>
+                </field>
+                    
+                <field
+                    type="spacer" 
+                    name="hor_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_HORIZONTAL"
+                    class="cw_label" />
+                                    
+                <field
+                    name="s_hor_text"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_HOR_TEXT_LABEL"
+                    description="MOD_CWTRAFFIC_SHOW_HOR_TEXT_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="hor_digital"
+                    type="radio"
+                    default="1"
+                    class="btn-group"
+                    label="MOD_CWTRAFFIC_HOR_DIGITAL_LABEL"
+                    description="MOD_CWTRAFFIC_HOR_DIGITAL_DESC">
+                    <option value="1">CW_BEFORE</option>
+                    <option value="0">CW_AFTER</option>
+                </field>
+                
+                <field
+                    name="hor_text"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_HORTEXT_LABEL"
+                    description="MOD_CWTRAFFIC_HORTEXT_DESC"/>
+                        
+                <field
+                    name="separator"
+                    type="text"
+                    default="|"
+                    label="MOD_CWTRAFFIC_SEPARATOR"
+                    description="MOD_CWTRAFFIC_SEPARATORDESC"/>
+                        
+            </fieldset>
+            
+            <fieldset 
+                name="VISITOR"
+                label="MOD_CWTRAFFIC_VISITOR_SEPARATOR">
+                
+                <field
+                    name="s_visitor_info"
+                    type="radio" 
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_V_INFO_LABEL"
+                    description="MOD_CWTRAFFIC_SHOW_V_INFO_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                                    
+                <field 
+                    name="display_title_visitor" 
+                    type="radio"                            
+                    default="1" 
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_FIELD_DISPLAY_TITLE_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_DISPLAY_TITLE_DESC" >
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+
+                <field 
+                    name="title_visitor" 
+                    type="text" 
+                    default="" 
+                    label="MOD_CWTRAFFIC_FIELD_TITLE_TEXT_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_TITLE_TEXT_DESC" />   
+                 
+                <field 
+                    name="title_format_visitor" 
+                    type="list" 
+                    default="3"
+                    label="MOD_CWTRAFFIC_FIELD_TITLE_FORMAT_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_TITLE_FORMAT_DESC" >
+                    <option value="1">MOD_CWTRAFFIC_FIELD_TFORMAT_OP1</option>
+                    <option value="2">MOD_CWTRAFFIC_FIELD_TFORMAT_OP2</option>
+                    <option value="3">MOD_CWTRAFFIC_FIELD_TFORMAT_OP3</option>
+                    <option value="4">MOD_CWTRAFFIC_FIELD_TFORMAT_OP4</option>
+                    <option value="5">MOD_CWTRAFFIC_FIELD_TFORMAT_OP5</option>
+                </field>
+                
+                <field 
+                    name="title_align_visitor" 
+                    type="list"                         
+                    default="cwt-vi-title-ac" 
+                    label="MOD_CWTRAFFIC_FIELD_TITLE_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_TITLE_ALIGNMENT_DESC" >
+                    <option value="cwt-vi-title-al">MOD_CWTRAFFIC_FIELD_ALIGNMENT_OP1</option>
+                    <option value="cwt-vi-title-ac">MOD_CWTRAFFIC_FIELD_ALIGNMENT_OP2</option>
+                    <option value="cwt-vi-title-ar">MOD_CWTRAFFIC_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                                
+                <field
+                    name="hline_visitor"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_HLINE_OPT"
+                    description="MOD_CWTRAFFIC_SHOW_HLINE_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>  
+
+                <field
+                    type="spacer" 
+                    name="ip_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_IP"
+                    class="cw_label" />
+                                    
+                <field
+                    name="s_guestip"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_VISITOR_IP"
+                    description="MOD_CWTRAFFIC_SHOW_VISITOR_IP_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="guestip"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_VISITOR_IP_OPT"
+                    description="MOD_CWTRAFFIC_VISITOR_IP_DESC"/>
+                    
+                <field
+                    type="spacer" 
+                    name="browser_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_BROWSER"
+                    class="cw_label" />
+                                
+                <field
+                    name="s_guest_browser"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_V_BROWSER_LABEL"
+                    description="MOD_CWTRAFFIC_SHOW_V_BROWSER_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="guest_browser"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_V_BROWSER_LABEL"
+                    description="MOD_CWTRAFFIC_V_BROWSER_DESC"/>
+                
+                <field
+                    name="guest_browser_v"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_V_BROWSER_VERSION_LABEL"
+                    description="MOD_CWTRAFFIC_V_BROWSER_VERSION_DESC"/>
+                
+                <field
+                    type="spacer" 
+                    name="os_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_OS"
+                    class="cw_label" />
+                                
+                <field
+                    name="s_guest_os"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_V_OS_LABEL"
+                    description="MOD_CWTRAFFIC_SHOW_V_OS_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="guest_os"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFIC_V_OS_LABEL"
+                    description="MOD_CWTRAFFIC_V_OS_DESC"/>
+                    
+            </fieldset>
+                    
+            <fieldset 
+                name="WHOISONINE"
+                label="MOD_CWTRAFFIC_WHOISONLINE_SEPARATOR">                  
+                        
+                <field
+                    name="s_whoisonline"
+                    type="radio" 
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_WHOISONLINE"
+                    description="MOD_CWTRAFFIC_SHOW_WHOISONLINE_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                                    
+                <field 
+                    name="display_title_who" 
+                    type="radio"                            
+                    default="1" 
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_FIELD_DISPLAY_TITLE_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_DISPLAY_TITLE_DESC" >
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+
+                <field 
+                    name="title_who" 
+                    type="text" 
+                    default="" 
+                    label="MOD_CWTRAFFIC_FIELD_TITLE_TEXT_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_TITLE_TEXT_DESC" />
+                
+                <field 
+                    name="subtitle_who" 
+                    type="text" 
+                    default="" 
+                    label="MOD_CWTRAFFIC_FIELD_SUBTITLE_TEXT_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_SUBTITLE_TEXT_DESC" />
+                    
+                <field 
+                    name="title_align_who" 
+                    type="list"                         
+                    default="cwt-wio-title-ac" 
+                    label="MOD_CWTRAFFIC_FIELD_TITLE_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_TITLE_ALIGNMENT_DESC" >
+                    <option value="cwt-wio-title-al">MOD_CWTRAFFIC_FIELD_ALIGNMENT_OP1</option>
+                    <option value="cwt-wio-title-ac">MOD_CWTRAFFIC_FIELD_ALIGNMENT_OP2</option>
+                    <option value="cwt-wio-title-ar">MOD_CWTRAFFIC_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                    
+                <field 
+                    name="title_format_who" 
+                    type="list" 
+                    default="3"
+                    label="MOD_CWTRAFFIC_FIELD_TITLE_FORMAT_LABEL" 
+                    description="MOD_CWTRAFFIC_FIELD_TITLE_FORMAT_DESC" >
+                    <option value="1">MOD_CWTRAFFIC_FIELD_TFORMAT_OP1</option>
+                    <option value="2">MOD_CWTRAFFIC_FIELD_TFORMAT_OP2</option>
+                    <option value="3">MOD_CWTRAFFIC_FIELD_TFORMAT_OP3</option>
+                    <option value="4">MOD_CWTRAFFIC_FIELD_TFORMAT_OP4</option>
+                    <option value="5">MOD_CWTRAFFIC_FIELD_TFORMAT_OP5</option>
+                </field>
+                
+                <field
+                    name="hline_who"
+                    type="radio" 
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_HLINE_OPT"
+                    description="MOD_CWTRAFFIC_SHOW_HLINE_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+            </fieldset> 
+                
+            <fieldset 
+                name="advanced">
+                
+                <field
+                    type="spacer" 
+                    name="css_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_CSS"
+                    class="cw_label" />
+                                
+                <field
+                    name="load_css"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_FIELD_LOAD_CSS_LABEL"
+                    description="MOD_CWTRAFFIC_FIELD_LOAD_CSS_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="custom_css"
+                    type="filelist"
+                    default=""
+                    hide_default="true"
+                    filter="css"
+                    directory="media/coalawebtraffic/modules/traffic/css/custom"
+                    label="MOD_CWTRAFFIC_FIELD_CUSTOM_CSS_LABEL"
+                    description="MOD_CWTRAFFIC_FIELD_CUSTOM_CSS_DESC" />
+
+                <field
+                    type="spacer" 
+                    name="datetime_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_DATETIME"
+                    class="cw_label" />
+                                                
+                <field
+                    name="s_dateTime"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFIC_SHOW_DATETIME"
+                    description="MOD_CWTRAFFIC_SHOW_DATETIME_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="dateTimeFormat"
+                    type="list"
+                    validate="options"
+                    default="LC4"
+                    label="MOD_CWTRAFFIC_DATETIME_FORMAT"
+                    description="MOD_CWTRAFFIC_DATETIME_FORMAT_DESC">
+                    <option value="JS1">MOD_CWTRAFFIC_DATETIME_JS1</option>
+                    <option value="LC4">MOD_CWTRAFFIC_DATETIME_LC4</option>
+                    <option value="LC3">MOD_CWTRAFFIC_DATETIME_LC3</option>
+                    <option value="LC1">MOD_CWTRAFFIC_DATETIME_LC1</option>
+                    <option value="LC2">MOD_CWTRAFFIC_DATETIME_LC2</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="other_spacer" 
+                    label="MOD_CWTRAFFIC_SPACER_OTHER"
+                    class="cw_label" />
+                                
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="itemid">
+                    <option value="itemid"></option>
+                </field>
+                
+            </fieldset>
+            
+            <fieldset 
+                name="VERSION"
+                label="MOD_CWTRAFFIC_TITLE_VERSION">
+                
+                <field 
+                    name="version_info"
+                    type="version"
+                    label="com_coalawebtraffic"/>
+                
+            </fieldset>
+            
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_skillschart</name>
+	<author>Masoud</author>
+	<creationDate>2016</creationDate>
+	<copyright>Copyright (C) 2016 - 2020 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>masoud.nicksefat@yahoo.com</authorEmail>
+	<authorUrl>mastermedia.ir</authorUrl>
+	<version>1.0.0</version>
+	<description>this is amazing simple portfolio!</description>
+	<files>
+		<filename module="mod_skillschart">mod_skillschart.php</filename>
+		<filename>mod_skillschart.xml</filename>
+		<filename>index.html</filename>
+		<folder>build</folder>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>img</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+								
+				<field 
+					name="skillName" 
+					type="text" 
+					default="Some text" 
+					label="نام مهارت" 
+					description="" 
+					size="14" 
+				/>
+				
+				<field
+					name="skillCount"
+					type="number"
+					label="درصد مهارت"
+					description="میزان مهارت شما بر حسب درصد"
+				/>
+				
+				
+				<field 
+					name="skillImage" 
+					type="media" 
+					label="تصویر مهارت"
+					directory="" 
+				/>
+				
+				<field 
+					name="skillDscrpt" 
+					type="textarea" 
+					default="" 
+					label="درباره مهارت" 
+					description="متن وارد شده نمی تواند جایگزین عکس شود مگر اینکه عکسی وجود نداشته باشد" 
+					rows="5" cols="10" filter="raw"
+				/>
+				
+				<field 
+					name="dataColor" 
+					type="color" 
+					default="#229922"
+					label="رنگ نمودار"
+					description="یک رنگ مناسب انتخاب کنید" 
+				/>
+	
+				<field 
+					name="dataBackground" 
+					type="color" 
+					default="#fff"
+					label="رنگ نمودار"
+					description="یک رنگ مناسب انتخاب کنید" 
+				/>
+								
+				<field
+					name="skillWidth"
+					type="number"
+					label="عرض کادر"
+					description="ابعاد کادر مهارت بر حسب درصد"
+				/>
+				<field
+					name="skillHeight"
+					type="number"
+					label="ارتفاع کادر"
+					description="ارتفاع کادر مهارت بر حسب پیکسل"
+				/>
+				
+				<field
+					name="layout" 
+					type="modulelayout" 
+					label="JFIELD_ALT_LAYOUT_LABEL" 
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" 
+				/>
+             </fieldset>  
+		</fields>
+	</config>
+</extension>

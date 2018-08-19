@@ -1,0 +1,39 @@
+/*! UIkit 2.27.1 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
+/* ========================================================================
+   Component: Accordion
+ ========================================================================== */
+/* Sub-object: `cw-accordion-title`
+ ========================================================================== */
+.cw-accordion-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  background: #f7f7f7;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+/* Sub-object: `cw-accordion-content`
+ ========================================================================== */
+.cw-accordion-content {
+  padding: 0 15px 15px 15px;
+}
+/*
+ * Micro clearfix to make panels more robust
+ */
+.cw-accordion-content:before,
+.cw-accordion-content:after {
+  content: "";
+  display: table;
+}
+.cw-accordion-content:after {
+  clear: both;
+}
+/*
+ * Remove margin from the last-child
+ */
+.cw-accordion-content > :last-child {
+  margin-bottom: 0;
+}

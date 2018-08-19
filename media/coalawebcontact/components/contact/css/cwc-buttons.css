@@ -1,0 +1,158 @@
+/**
+ * @author              Steven Palmer
+ * @author url          https://coalaweb.com/
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+*/
+
+/*------------------------------------------------------------------------------
+Clean Buttons
+------------------------------------------------------------------------------*/
+.cwc-btn-clean {
+    margin: 5px 0px;
+    border: medium none;
+    overflow: visible;
+    font-family: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+    -moz-font-feature-settings: inherit;
+    -moz-font-language-override: inherit;
+    color: #444;
+    text-transform: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px 12px;
+    background: none repeat scroll 0% 0% #EEE;
+    vertical-align: middle;
+    line-height: 30px;
+    min-height: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.cwc-btn-clean:hover, 
+.cwc-btn-clean:focus {
+    background-color: #363C4F;
+    color: #FFF;
+    outline: medium none;
+    text-decoration: none;
+}
+
+.clean-blue {
+    background-color: #2F99D3;
+    color: #FFF;
+}
+
+.clean-green {
+    background-color: #5AD28A;
+    color: #FFF;
+}
+
+.clean-red {
+    background-color: #DA4F49;
+    color: #FFF;
+}
+
+.clean-pink {
+    background-color: #ED4EDD;
+    color: #FFF;
+}
+
+.clean-teal {
+    background-color: #21AEA5;
+    color: #FFF;
+}
+
+.clean-orange {
+    background-color: #FAA732;
+    color: #FFF;
+}
+
+/*------------------------------------------------------------------------------
+Gloss Buttons
+------------------------------------------------------------------------------*/
+.cwc-btn-gloss {
+    background-color: #F5F5F5;
+    background-image: linear-gradient(#FFFFFF, #E6E6E6);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-image: none;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 4px 10px;
+    text-align: center;
+    vertical-align: middle;
+    margin:5px 0px;
+}
+
+.cwc-btn-gloss:hover,
+.cwc-btn-gloss:focus {
+    background-color: #E6E6E6;
+    background-position: 0 -15px;
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-position 0.1s linear 0s;
+}
+
+.gloss-blue {
+    background-color: #49AFCD;
+    background-image: linear-gradient(#5BC0DE, #2F96B4);
+}
+
+.gloss-blue:hover,
+.gloss-blue:focus {background-color: #2F96B4;}
+
+.gloss-green {
+    background-color: #5BB75B;
+    background-image: linear-gradient(#62C462, #51A351);
+}
+
+.gloss-green:hover,
+.gloss-green:focus {background-color: #51A351;}
+
+.gloss-red {
+    background-color: #DA4F49;
+    background-image: linear-gradient(#EE5F5B, #BD362F);
+}
+
+.gloss-red:hover,
+.gloss-red:focus {background-color: #BD362F;}
+
+.gloss-pink {
+    background-color: #D825C8;
+    background-image: linear-gradient(#F27BEA, #C843BF);
+}
+
+.gloss-pink:hover,
+.gloss-pink:focus {background-color: #C843BF;}
+
+.gloss-teal {
+    background-color: #21AEA5;
+    background-image: linear-gradient(#46CBC7, #1A9E9A);
+}
+
+.gloss-teal:hover,
+.gloss-teal:focus {background-color: #1A9E9A;}
+
+.gloss-orange {
+    background-color: #FAA732;
+    background-image: linear-gradient(#FBB450, #F89406);
+}
+
+.gloss-orange:hover,
+.gloss-orange:focus {background-color: #F89406;}
+
+#rc-imageselect, .g-recaptcha {transform:scale(0.77);transform-origin:0;transform:scale(0.77);transform-origin:0 0; }

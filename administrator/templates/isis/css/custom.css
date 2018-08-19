@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+.view-login {
+background: url(../images/WDBg.jpg) no-repeat fixed 50% 50% / cover #eff0f4 !important;
+}
+
+.login.well {
+background: none repeat scroll 0 0 rgba(245, 245, 245, 0.3);
+}
+
+.view-login .well hr {
+border-color: transparent;
+}

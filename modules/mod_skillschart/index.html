@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<link href="css/tox-progress.css" rel="stylesheet" type="text/css">
+<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+<script src="js/tox-progress.js"></script>
+
+</head>
+
+<body>
+	<div style="width:20%;">
+        <div class="tox-progress" data-size="180" data-thickness="12" data-color="#229922" data-background="#ffffff" data-progress="50" data-speed="1500">
+            <div class="tox-progress-content" data-vcenter="true">
+                <img height="90" style="margin:auto" src="img/Javascript_badge.png"/>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                ToxProgress.create();
+                ToxProgress.animate();
+            });
+        </script>
+        <p id="percent" style="text-align:center;">0</p>
+        <script>
+		  var percent = document.getElementById("percent"); 
+		  var num = 0;
+		  
+		  var id = setInterval(frame, 15);
+		  
+		  function frame() {
+			if (num == 95) {
+			  clearInterval(id);
+			} else {
+			  num++;
+			  percent.innerHTML = num + '%';
+			}
+		  }
+		</script>
+	</div>
+</body>
+    
+</html>

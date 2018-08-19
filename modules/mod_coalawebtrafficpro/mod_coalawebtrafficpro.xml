@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.5" method="upgrade" client="site">
+    <name>MOD_COALAWEBTRAFFICPRO</name>
+    <creationDate>2016-10-06</creationDate>
+    <author>Steven Palmer</author>
+    <authorEmail>support@coalaweb.com</authorEmail>
+    <authorUrl>http://coalaweb.com</authorUrl>
+    <copyright>Copyright (c) 2016 Steven Palmer All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.0.6</version>
+    <description>MOD_COALAWEBTRAFFICPRO_DESC</description>
+
+    <files>
+        <filename module="mod_coalawebtrafficpro">mod_coalawebtrafficpro.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_coalawebtrafficpro.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_coalawebtrafficpro.sys.ini</language>
+    </languages>
+
+    <!-- HELP FILE -->
+    <help url="MOD_CWTRAFFICPRO_HELP_URL" />
+
+    <config>
+        <fields 
+            name="params" 
+            addfieldpath="/plugins/system/cwgears/fields">
+                
+            <fieldset
+                name="GENERAL"
+                label="MOD_CWTRAFFICPRO_GENERAL_TAB">
+                
+                <field 
+                    name="css_import" 
+                    type="css"/>
+                <field
+                    type="spacer" 
+                    name="main_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_MAIN"
+                    class="cw_label" /> 
+                <field
+                    name="main_style"
+                    type="list"
+                    default="n"
+                    label="MOD_CWTRAFFICPRO_FIELD_PANEL_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_PANEL_STYLE_DESC">
+                    <option value="d">MOD_CWTRAFFICPRO_STYLE2_OPT1</option>
+                    <option value="p">MOD_CWTRAFFICPRO_STYLE2_OPT2</option>
+                    <option value="s">MOD_CWTRAFFICPRO_STYLE2_OPT3</option>
+                    <option value="h">MOD_CWTRAFFICPRO_STYLE2_OPT4</option>
+                    <option value="n">MOD_CWTRAFFICPRO_STYLE2_OPT5</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="main_title_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_MAIN_TITLE"
+                    class="cw_label" /> 
+                
+                <field 
+                    name="s_title_main" 
+                    type="radio"                            
+                    default="1" 
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_DESC" >
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+
+                <field 
+                    name="title_main" 
+                    type="text" 
+                    default="" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_DESC" />   
+                 
+                <field 
+                    name="title_format_main" 
+                    type="list" 
+                    default="H3"
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_DESC" >
+                    <option value="H1">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP1</option>
+                    <option value="H2">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP2</option>
+                    <option value="H3">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP3</option>
+                    <option value="H4">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP4</option>
+                    <option value="H5">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP5</option>
+                </field>
+                
+                <field 
+                    name="title_align_main" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                
+                <field
+                    name="main_icon"
+                    type="list"
+                    default="globe"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="digital_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_DIGITAL"
+                    class="cw_label" /> 
+                
+                <field
+                    name="s_digital"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_DIGITAL_LABEL"
+                    description="MOD_CWTRAFFICPRO_SHOW_DIGITAL_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                 
+                <field 
+                    name="digit_number" 
+                    default="5" 
+                    type="text" 
+                    label="MOD_CWTRAFFICPRO_DIGIT_NUM_LABEL"
+                    description="MOD_CWTRAFFICPRO_DIGIT_NUM_DESC"/>
+                
+                <field
+                    name="digit_size"
+                    type="list"
+                    default="small"
+                    label="MOD_CWTRAFFICPRO_SIZE_LABEL"
+                    description="MOD_CWTRAFFICPRO_SIZE_DESC">
+                    <option value="mini">MOD_CWTRAFFICPRO_SIZE_OPT1</option>
+                    <option value="small">MOD_CWTRAFFICPRO_SIZE_OPT2</option>
+                    <option value="default">MOD_CWTRAFFICPRO_SIZE_OPT3</option>
+                    <option value="large">MOD_CWTRAFFICPRO_SIZE_OPT4</option>
+                </field> 
+                
+                <field
+                    name="digit_type"
+                    type="list"
+                    default="primary"
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="digit_margin"
+                    type="list"
+                    default="margin"
+                    label="MOD_CWTRAFFICPRO_FIELD_MARGIN_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_MARGIN_DESC">
+                    <option value="margin">MOD_CWTRAFFICPRO_MARGIN_OPT1</option>
+                    <option value="margin-large">MOD_CWTRAFFICPRO_MARGIN_OPT2</option>
+                </field>
+                    
+            </fieldset>
+                
+            <fieldset
+                name="LAYOUT"
+                label="MOD_CWTRAFFICPRO_LAYOUT_TAB">
+                 
+                <field 
+                    name="width_info"
+                    type="info"
+                    label="MOD_CWTRAFFICPRO_MSG_WIDTH"/>
+                                
+                <field
+                    name="columns_large"
+                    type="text"
+                    default="1"
+                    label="MOD_CWTRAFFICPRO_FIELD_COLUMNS_LARGE_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_COLUMNS_LARGE_DESC" />
+                        
+                <field
+                    name="columns_medium"
+                    type="text"
+                    default="1"
+                    label="MOD_CWTRAFFICPRO_FIELD_COLUMNS_MEDIUM_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_COLUMNS_MEDIUM_DESC" />
+                
+                <field
+                    name="columns_small"
+                    type="text"
+                    default="1"
+                    label="MOD_CWTRAFFICPRO_FIELD_COLUMNS_SMALL_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_COLUMNS_SMALL_DESC" />
+
+            </fieldset>
+            
+            <fieldset
+                name="TRAFFIC"
+                label="MOD_CWTRAFFICPRO_TRAFFIC_TAB">
+                
+                <field
+                    type="spacer" 
+                    name="general_traffic_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_GENERAL"
+                    class="cw_label" />
+                 
+                <field
+                    name="s_traffic"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_DISPLAY_PANEL_LABEL"
+                    description="MOD_CWTRAFFICPRO_DISPLAY_PANEL_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="traffic_style"
+                    type="list"
+                    default="s"
+                    label="MOD_CWTRAFFICPRO_FIELD_PANEL_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_PANEL_STYLE_DESC">
+                    <option value="d">MOD_CWTRAFFICPRO_STYLE2_OPT1</option>
+                    <option value="p">MOD_CWTRAFFICPRO_STYLE2_OPT2</option>
+                    <option value="s">MOD_CWTRAFFICPRO_STYLE2_OPT3</option>
+                    <option value="h">MOD_CWTRAFFICPRO_STYLE2_OPT4</option>
+                    <option value="n">MOD_CWTRAFFICPRO_STYLE2_OPT5</option>
+                </field>
+                
+                <field 
+                    name="s_title_traffic" 
+                    type="radio"                            
+                    default="1" 
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_DESC" >
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+
+                <field 
+                    name="title_traffic" 
+                    type="text" 
+                    default="" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_DESC" />   
+                 
+                <field 
+                    name="title_format_traffic" 
+                    type="list" 
+                    default="H3"
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_DESC" >
+                    <option value="H1">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP1</option>
+                    <option value="H2">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP2</option>
+                    <option value="H3">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP3</option>
+                    <option value="H4">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP4</option>
+                    <option value="H5">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP5</option>
+                </field>
+                
+                <field 
+                    name="title_align_traffic" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                
+                <field
+                    name="traffic_icon"
+                    type="list"
+                    default="line-chart"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="counters_traffic_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_COUNTERS"
+                    class="cw_label" />
+                
+                <field 
+                    name="counter_align_traffic" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                
+                <field
+                    name="counter_size_traffic"
+                    type="list"
+                    default="small"
+                    label="MOD_CWTRAFFICPRO_SIZE_LABEL"
+                    description="MOD_CWTRAFFICPRO_SIZE_DESC">
+                    <option value="mini">MOD_CWTRAFFICPRO_SIZE_OPT1</option>
+                    <option value="small">MOD_CWTRAFFICPRO_SIZE_OPT2</option>
+                    <option value="default">MOD_CWTRAFFICPRO_SIZE_OPT3</option>
+                    <option value="large">MOD_CWTRAFFICPRO_SIZE_OPT4</option>
+                </field> 
+                
+                <field
+                    name="traffic_icon_width"
+                    type="list"
+                    default="25"
+                    label="MOD_CWTRAFFICPRO_FIELD_ICON_MIN_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_ICON_MIN_DESC">
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="35">J35</option>
+                    <option value="40">J40</option>
+                    <option value="45">J45</option>
+                    <option value="50">J50</option>
+                    <option value="55">J55</option>
+                    <option value="60">J60</option>
+                    <option value="65">J65</option>
+                    <option value="70">J70</option>
+                    <option value="75">J75</option>
+                    <option value="80">J80</option>
+                    <option value="85">J85</option>
+                    <option value="90">J90</option>
+                    <option value="95">J95</option>
+                    <option value="100">J100</option>
+                    <option value="105">J105</option>
+                    <option value="110">J110</option>
+                    <option value="115">J115</option>
+                    <option value="120">J120</option>
+                    <option value="125">J125</option>
+                    <option value="130">J130</option>
+                    <option value="135">J135</option>
+                    <option value="140">J140</option>
+                    <option value="145">J145</option>
+                    <option value="150">J150</option>
+                </field>
+                
+                <field
+                    name="traffic_text_width"
+                    type="list"
+                    default="80"
+                    label="MOD_CWTRAFFICPRO_FIELD_TEXT_MIN_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_TEXT_MIN_DESC">
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="35">J35</option>
+                    <option value="40">J40</option>
+                    <option value="45">J45</option>
+                    <option value="50">J50</option>
+                    <option value="55">J55</option>
+                    <option value="60">J60</option>
+                    <option value="65">J65</option>
+                    <option value="70">J70</option>
+                    <option value="75">J75</option>
+                    <option value="80">J80</option>
+                    <option value="85">J85</option>
+                    <option value="90">J90</option>
+                    <option value="95">J95</option>
+                    <option value="100">J100</option>
+                    <option value="105">J105</option>
+                    <option value="110">J110</option>
+                    <option value="115">J115</option>
+                    <option value="120">J120</option>
+                    <option value="125">J125</option>
+                    <option value="130">J130</option>
+                    <option value="135">J135</option>
+                    <option value="140">J140</option>
+                    <option value="145">J145</option>
+                    <option value="150">J150</option>
+                </field>
+                
+                <field
+                    name="traffic_counter_width"
+                    type="list"
+                    default="40"
+                    label="MOD_CWTRAFFICPRO_FIELD_COUNTER_MIN_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_COUNTER_MIN_DESC">
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="35">J35</option>
+                    <option value="40">J40</option>
+                    <option value="45">J45</option>
+                    <option value="50">J50</option>
+                    <option value="55">J55</option>
+                    <option value="60">J60</option>
+                    <option value="65">J65</option>
+                    <option value="70">J70</option>
+                    <option value="75">J75</option>
+                    <option value="80">J80</option>
+                    <option value="85">J85</option>
+                    <option value="90">J90</option>
+                    <option value="95">J95</option>
+                    <option value="100">J100</option>
+                    <option value="105">J105</option>
+                    <option value="110">J110</option>
+                    <option value="115">J115</option>
+                    <option value="120">J120</option>
+                    <option value="125">J125</option>
+                    <option value="130">J130</option>
+                    <option value="135">J135</option>
+                    <option value="140">J140</option>
+                    <option value="145">J145</option>
+                    <option value="150">J150</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="today_spacer" 
+                    label="MOD_CWTRAFFICPRO_TODAY"
+                    class="cw_label" />
+                
+                <field
+                    name="s_today"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_TODAY"
+                    description="MOD_CWTRAFFICPRO_SHOW_TODAY_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="today"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_TODAY_LABEL"
+                    description="MOD_CWTRAFFICPRO_TODAY_DESC"/>
+                
+                <field
+                    name="today_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="today_icon"
+                    type="list"
+                    default="bar-chart"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                       
+                <field
+                    type="spacer" 
+                    name="yesterday_spacer" 
+                    label="MOD_CWTRAFFICPRO_YESTERDAY"
+                    class="cw_label" />
+                                                         
+                <field
+                    name="s_yesterday"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_YESTERDAY"
+                    description="MOD_CWTRAFFICPRO_SHOW_YESTERDAY_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="yesterday"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_YESTERDAY_LABEL"
+                    description="MOD_CWTRAFFICPRO_YESTERDAY_DESC"/>
+                
+                                
+                <field
+                    name="yesterday_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="yesterday_icon"
+                    type="list"
+                    default="bar-chart"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                        
+                <field
+                    type="spacer" 
+                    name="week_spacer" 
+                    label="MOD_CWTRAFFICPRO_WEEK"
+                    class="cw_label" />
+                                                                                
+                <field
+                    name="s_week"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_WEEK"
+                    description="MOD_CWTRAFFICPRO_SHOW_WEEK_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="week"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_WEEK_LABEL"
+                    description="MOD_CWTRAFFICPRO_WEEK_DESC"/>
+                
+                <field
+                    name="week_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="week_icon"
+                    type="list"
+                    default="bar-chart"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                  
+                <field
+                    type="spacer" 
+                    name="month_spacer" 
+                    label="MOD_CWTRAFFICPRO_MONTH"
+                    class="cw_label" />
+                                                                                                              
+                <field
+                    name="s_month"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_MONTH"
+                    description="MOD_CWTRAFFICPRO_SHOW_MONTH_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field 
+                    name="month"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_MONTH_LABEL"
+                    description="MOD_CWTRAFFICPRO_MONTH_DESC"/>
+                
+                <field
+                    name="month_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="month_icon"
+                    type="list"
+                    default="bar-chart"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                        
+                <field
+                    type="spacer" 
+                    name="all_spacer" 
+                    label="MOD_CWTRAFFICPRO_TOTAL"
+                    class="cw_label" />
+                                                                                                        
+                <field
+                    name="s_total"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_TOTAL"
+                    description="MOD_CWTRAFFICPRO_SHOW_TOTAL_VISITORS">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field 
+                    name="total"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_TOTAL_LABEL"
+                    description="MOD_CWTRAFFICPRO_TOTAL_DESC"/>
+                
+                <field
+                    name="total_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="total_icon"
+                    type="list"
+                    default="bar-chart"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>             
+                        
+            </fieldset>
+            
+            <fieldset 
+                name="VISITOR"
+                label="MOD_CWTRAFFICPRO_VISITOR_TAB">
+                
+                <field
+                    type="spacer" 
+                    name="general_visitor_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_GENERAL"
+                    class="cw_label" />
+                                
+                <field
+                    name="s_visitor_info"
+                    type="radio" 
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_DISPLAY_PANEL_LABEL"
+                    description="MOD_CWTRAFFICPRO_DISPLAY_PANEL_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="visitor_style"
+                    type="list"
+                    default="s"
+                    label="MOD_CWTRAFFICPRO_FIELD_PANEL_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_PANEL_STYLE_DESC">
+                    <option value="d">MOD_CWTRAFFICPRO_STYLE2_OPT1</option>
+                    <option value="p">MOD_CWTRAFFICPRO_STYLE2_OPT2</option>
+                    <option value="s">MOD_CWTRAFFICPRO_STYLE2_OPT3</option>
+                    <option value="h">MOD_CWTRAFFICPRO_STYLE2_OPT4</option>
+                    <option value="n">MOD_CWTRAFFICPRO_STYLE2_OPT5</option>
+                </field>
+                                    
+                <field 
+                    name="display_title_visitor" 
+                    type="radio"                            
+                    default="1" 
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_DESC" >
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+
+                <field 
+                    name="title_visitor" 
+                    type="text" 
+                    default="" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_DESC" />   
+                 
+                <field 
+                    name="title_format_visitor" 
+                    type="list" 
+                    default="H3"
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_DESC" >
+                    <option value="H1">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP1</option>
+                    <option value="H2">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP2</option>
+                    <option value="H3">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP3</option>
+                    <option value="H4">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP4</option>
+                    <option value="H5">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP5</option>
+                </field>
+                
+                <field 
+                    name="title_align_visitor" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                
+                <field
+                    name="visitor_icon"
+                    type="list"
+                    default="user"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="counters_visitor_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_COUNTERS"
+                    class="cw_label" />
+                
+                <field 
+                    name="counter_align_visitor" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                
+                <field
+                    name="counter_size_visitor"
+                    type="list"
+                    default="small"
+                    label="MOD_CWTRAFFICPRO_SIZE_LABEL"
+                    description="MOD_CWTRAFFICPRO_SIZE_DESC">
+                    <option value="mini">MOD_CWTRAFFICPRO_SIZE_OPT1</option>
+                    <option value="small">MOD_CWTRAFFICPRO_SIZE_OPT2</option>
+                    <option value="default">MOD_CWTRAFFICPRO_SIZE_OPT3</option>
+                    <option value="large">MOD_CWTRAFFICPRO_SIZE_OPT4</option>
+                </field> 
+                
+                <field
+                    name="s_visitor_text"
+                    type="radio" 
+                    default="0"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_DISPLAY_TEXT_LABEL"
+                    description="MOD_CWTRAFFICPRO_DISPLAY_TEXT_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="visitor_icon_width"
+                    type="list"
+                    default="40"
+                    label="MOD_CWTRAFFICPRO_FIELD_ICON_MIN_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_ICON_MIN_DESC">
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="35">J35</option>
+                    <option value="40">J40</option>
+                    <option value="45">J45</option>
+                    <option value="50">J50</option>
+                    <option value="55">J55</option>
+                    <option value="60">J60</option>
+                    <option value="65">J65</option>
+                    <option value="70">J70</option>
+                    <option value="75">J75</option>
+                    <option value="80">J80</option>
+                    <option value="85">J85</option>
+                    <option value="90">J90</option>
+                    <option value="95">J95</option>
+                    <option value="100">J100</option>
+                    <option value="105">J105</option>
+                    <option value="110">J110</option>
+                    <option value="115">J115</option>
+                    <option value="120">J120</option>
+                    <option value="125">J125</option>
+                    <option value="130">J130</option>
+                    <option value="135">J135</option>
+                    <option value="140">J140</option>
+                    <option value="145">J145</option>
+                    <option value="150">J150</option>
+                </field>
+                
+                <field
+                    name="visitor_text_width"
+                    type="list"
+                    default="90"
+                    label="MOD_CWTRAFFICPRO_FIELD_TEXT_MIN_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_TEXT_MIN_DESC">
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="35">J35</option>
+                    <option value="40">J40</option>
+                    <option value="45">J45</option>
+                    <option value="50">J50</option>
+                    <option value="55">J55</option>
+                    <option value="60">J60</option>
+                    <option value="65">J65</option>
+                    <option value="70">J70</option>
+                    <option value="75">J75</option>
+                    <option value="80">J80</option>
+                    <option value="85">J85</option>
+                    <option value="90">J90</option>
+                    <option value="95">J95</option>
+                    <option value="100">J100</option>
+                    <option value="105">J105</option>
+                    <option value="110">J110</option>
+                    <option value="115">J115</option>
+                    <option value="120">J120</option>
+                    <option value="125">J125</option>
+                    <option value="130">J130</option>
+                    <option value="135">J135</option>
+                    <option value="140">J140</option>
+                    <option value="145">J145</option>
+                    <option value="150">J150</option>
+                </field>
+                
+                <field
+                    name="visitor_counter_width"
+                    type="list"
+                    default="110"
+                    label="MOD_CWTRAFFICPRO_FIELD_COUNTER_MIN_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_COUNTER_MIN_DESC">
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="35">J35</option>
+                    <option value="40">J40</option>
+                    <option value="45">J45</option>
+                    <option value="50">J50</option>
+                    <option value="55">J55</option>
+                    <option value="60">J60</option>
+                    <option value="65">J65</option>
+                    <option value="70">J70</option>
+                    <option value="75">J75</option>
+                    <option value="80">J80</option>
+                    <option value="85">J85</option>
+                    <option value="90">J90</option>
+                    <option value="95">J95</option>
+                    <option value="100">J100</option>  
+                    <option value="105">J105</option>
+                    <option value="110">J110</option>
+                    <option value="115">J115</option>
+                    <option value="120">J120</option>
+                    <option value="125">J125</option>
+                    <option value="130">J130</option>
+                    <option value="135">J135</option>
+                    <option value="140">J140</option>
+                    <option value="145">J145</option>
+                    <option value="150">J150</option>
+                </field>
+
+                <field
+                    type="spacer" 
+                    name="ip_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_IP"
+                    class="cw_label" />
+                                    
+                <field
+                    name="s_ip"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_VISITOR_IP"
+                    description="MOD_CWTRAFFICPRO_SHOW_VISITOR_IP_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="ip"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_VISITOR_IP_OPT"
+                    description="MOD_CWTRAFFICPRO_VISITOR_IP_DESC"/>
+                
+                <field
+                    name="ip_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="ip_icon"
+                    type="list"
+                    default="map-marker"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                    
+                <field
+                    type="spacer" 
+                    name="browser_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_BROWSER"
+                    class="cw_label" />
+                                
+                <field
+                    name="s_browser"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_V_BROWSER_LABEL"
+                    description="MOD_CWTRAFFICPRO_SHOW_V_BROWSER_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="browser"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_V_BROWSER_LABEL"
+                    description="MOD_CWTRAFFICPRO_V_BROWSER_DESC"/>
+                
+                <field
+                    name="browser_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="browser_icon"
+                    type="list"
+                    default="desktop"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="browser_v_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_BROWSERV"
+                    class="cw_label" />
+                                
+                <field
+                    name="s_browser_v"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_V_BROWSERV_LABEL"
+                    description="MOD_CWTRAFFICPRO_SHOW_V_BROWSERV_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="browser_v"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_V_BROWSER_VERSION_LABEL"
+                    description="MOD_CWTRAFFICPRO_V_BROWSER_VERSION_DESC"/>
+                
+                <field
+                    name="browser_v_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="browser_v_icon"
+                    type="list"
+                    default="desktop"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="os_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_OS"
+                    class="cw_label" />
+                                
+                <field
+                    name="s_os"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_V_OS_LABEL"
+                    description="MOD_CWTRAFFICPRO_SHOW_V_OS_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="os"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_V_OS_LABEL"
+                    description="MOD_CWTRAFFICPRO_V_OS_DESC"/>
+                
+                <field
+                    name="os_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="os_icon"
+                    type="list"
+                    default="cogs"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="datetime_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_DATETIME"
+                    class="cw_label" />
+                                                
+                <field
+                    name="s_date"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_DATETIME"
+                    description="MOD_CWTRAFFICPRO_SHOW_DATETIME_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="date_label"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_V_DATE_LABEL"
+                    description="MOD_CWTRAFFICPRO_V_DATE_DESC"/>
+                
+                <field
+                    name="date_format"
+                    type="list"
+                    validate="options"
+                    default="LC4"
+                    label="MOD_CWTRAFFICPRO_DATETIME_FORMAT"
+                    description="MOD_CWTRAFFICPRO_DATETIME_FORMAT_DESC">
+                    <option value="JS1">MOD_CWTRAFFICPRO_DATETIME_JS1</option>
+                    <option value="LC4">MOD_CWTRAFFICPRO_DATETIME_LC4</option>
+                    <option value="LC3">MOD_CWTRAFFICPRO_DATETIME_LC3</option>
+                    <option value="LC1">MOD_CWTRAFFICPRO_DATETIME_LC1</option>
+                    <option value="LC2">MOD_CWTRAFFICPRO_DATETIME_LC2</option>
+                </field>
+                
+                <field
+                    name="date_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="date_icon"
+                    type="list"
+                    default="calendar"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                    
+            </fieldset>
+                    
+            <fieldset 
+                name="WHOISONINE"
+                label="MOD_CWTRAFFICPRO_WHO_TAB">                  
+                        
+                <field
+                    type="spacer" 
+                    name="general_who_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_GENERAL"
+                    class="cw_label" />
+                                
+                <field
+                    name="s_whoisonline"
+                    type="radio" 
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_DISPLAY_PANEL_LABEL"
+                    description="MOD_CWTRAFFICPRO_DISPLAY_PANEL_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="who_style"
+                    type="list"
+                    default="s"
+                    label="MOD_CWTRAFFICPRO_FIELD_PANEL_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_FIELD_PANEL_STYLE_DESC">
+                    <option value="d">MOD_CWTRAFFICPRO_STYLE2_OPT1</option>
+                    <option value="p">MOD_CWTRAFFICPRO_STYLE2_OPT2</option>
+                    <option value="s">MOD_CWTRAFFICPRO_STYLE2_OPT3</option>
+                    <option value="h">MOD_CWTRAFFICPRO_STYLE2_OPT4</option>
+                    <option value="n">MOD_CWTRAFFICPRO_STYLE2_OPT5</option>
+                </field>
+                                    
+                <field 
+                    name="display_title_who" 
+                    type="radio"                            
+                    default="1" 
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_DESC" >
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+
+                <field 
+                    name="title_who" 
+                    type="text" 
+                    default="" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_DESC" />
+                    
+                <field 
+                    name="title_format_who" 
+                    type="list" 
+                    default="H3"
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_DESC" >
+                    <option value="H1">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP1</option>
+                    <option value="H2">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP2</option>
+                    <option value="H3">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP3</option>
+                    <option value="H4">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP4</option>
+                    <option value="H5">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP5</option>
+                </field>
+                
+                <field 
+                    name="title_align_who" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+
+                <field
+                    name="who_icon"
+                    type="list"
+                    default="bullseye"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="counters_who_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_COUNTERS"
+                    class="cw_label" />
+                
+                <field 
+                    name="counter_align_who" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                
+                <field
+                    name="counter_size_who"
+                    type="list"
+                    default="small"
+                    label="MOD_CWTRAFFICPRO_SIZE_LABEL"
+                    description="MOD_CWTRAFFICPRO_SIZE_DESC">
+                    <option value="mini">MOD_CWTRAFFICPRO_SIZE_OPT1</option>
+                    <option value="small">MOD_CWTRAFFICPRO_SIZE_OPT2</option>
+                    <option value="default">MOD_CWTRAFFICPRO_SIZE_OPT3</option>
+                    <option value="large">MOD_CWTRAFFICPRO_SIZE_OPT4</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="who_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_WHO"
+                    class="cw_label" />
+                
+                  <field
+                    name="s_counter_w"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_SHOW_COUNTER_W_LABEL"
+                    description="MOD_CWTRAFFICPRO_SHOW_COUNTER_W_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                    
+                <field
+                    name="counter_w"
+                    type="text"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_TEXT_LABEL"
+                    description="MOD_CWTRAFFICPRO_TEXT_DESC"/>
+                
+                <field
+                    name="counter_w_type"
+                    type="list"
+                    default=""
+                    label="MOD_CWTRAFFICPRO_STYLE_LABEL"
+                    description="MOD_CWTRAFFICPRO_STYLE_DESC">
+                    <option value="">MOD_CWTRAFFICPRO_STYLE1_OPT1</option>
+                    <option value="primary">MOD_CWTRAFFICPRO_STYLE1_OPT2</option>
+                    <option value="success">MOD_CWTRAFFICPRO_STYLE1_OPT3</option>
+                    <option value="danger">MOD_CWTRAFFICPRO_STYLE1_OPT4</option>
+                </field>
+                
+                <field
+                    name="counter_w_icon"
+                    type="list"
+                    default="user"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                
+                <field
+                    type="spacer" 
+                    name="flags_spacer" 
+                    label="MOD_CWTRAFFICPRO_SPACER_FLAGS"
+                    class="cw_label" />
+                                
+                <field
+                    name="s_flags"
+                    type="radio" 
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_DISPLAY_FLAGS_LABEL"
+                    description="MOD_CWTRAFFICPRO_DISPLAY_FLAGS_DESC">
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+                
+                <field
+                    name="flags_max"
+                    type="list"
+                    default="5"
+                    label="MOD_CWTRAFFICPRO_FIELD_FLAGS_MAX_LABEL"
+                    description="MOD_CWTRAFFICPRO_FLAGS_MAX_DESC">
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="35">J35</option>
+                    <option value="40">J40</option>
+                    <option value="45">J45</option>
+                    <option value="50">J50</option>
+                </field>               
+                                
+                <field 
+                    name="flags_align" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+                                    
+                <field 
+                    name="display_title_flags" 
+                    type="radio"                            
+                    default="1" 
+                    class="btn-group btn-group-yesno"
+                    label="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_DISPLAY_TITLE_DESC" >
+                    <option value="1">CW_YES</option>
+                    <option value="0">CW_NO</option>
+                </field>
+
+                <field 
+                    name="title_flags" 
+                    type="text" 
+                    default="" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_TEXT_DESC" />
+                    
+                <field 
+                    name="title_format_flags" 
+                    type="list" 
+                    default="H4"
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_FORMAT_DESC" >
+                    <option value="H1">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP1</option>
+                    <option value="H2">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP2</option>
+                    <option value="H3">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP3</option>
+                    <option value="H4">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP4</option>
+                    <option value="H5">MOD_CWTRAFFICPRO_FIELD_TFORMAT_OP5</option>
+                </field>
+                
+                <field 
+                    name="title_align_flags" 
+                    type="list"                         
+                    default="center" 
+                    label="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_LABEL" 
+                    description="MOD_CWTRAFFICPRO_FIELD_TITLE_ALIGNMENT_DESC" >
+                    <option value="left">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP1</option>
+                    <option value="center">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP2</option>
+                    <option value="right">MOD_CWTRAFFICPRO_FIELD_ALIGNMENT_OP3</option>
+                </field>
+
+                <field
+                    name="flags_icon"
+                    type="list"
+                    default="flag"
+                    label="MOD_CWTRAFFICPRO_ICON_LABEL"
+                    description="MOD_CWTRAFFICPRO_ICON_DESC">
+                    <option value="bar-chart">MOD_CWTRAFFICPRO_ICON_OPT1</option>
+                    <option value="calendar">MOD_CWTRAFFICPRO_ICON_OPT2</option>
+                    <option value="cogs">MOD_CWTRAFFICPRO_ICON_OPT3</option>
+                    <option value="desktop">MOD_CWTRAFFICPRO_ICON_OPT4</option>
+                    <option value="flag">MOD_CWTRAFFICPRO_ICON_OPT5</option>
+                    <option value="globe">MOD_CWTRAFFICPRO_ICON_OPT6</option>
+                    <option value="line-chart">MOD_CWTRAFFICPRO_ICON_OPT7</option>
+                    <option value="map-marker">MOD_CWTRAFFICPRO_ICON_OPT8</option>
+                    <option value="bullseye">MOD_CWTRAFFICPRO_ICON_OPT9</option>
+                    <option value="user">MOD_CWTRAFFICPRO_ICON_OPT10</option>
+                </field>
+                    
+            </fieldset> 
+                
+            <fieldset 
+                name="advanced">
+                
+                <field
+                    name="uikit_prefix"
+                    type="list"
+                    default="cw"
+                    label="MOD_CWTRAFFICPRO_UIKIT_PREFIX_LABEL"
+                    description="MOD_CWTRAFFICPRO_UIKIT_PREFIX_DESC">
+                    <option value="cw">CW</option>
+                    <option value="uk">UK</option>
+                </field>
+                
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="itemid">
+                    <option value="itemid"></option>
+                </field>
+                
+            </fieldset>
+            
+            <fieldset 
+                name="VERSION"
+                label="MOD_CWTRAFFICPRO_TITLE_VERSION">
+                
+                <field 
+                    name="version_info"
+                    type="version"
+                    label="com_coalawebtraffic"/>
+                
+            </fieldset>
+            
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,66 @@
+/*! UIkit 2.27.1 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
+/* ========================================================================
+   Component: Sortable
+ ========================================================================== */
+.cw-sortable {
+  position: relative;
+}
+/*
+ * Deactivate browser touch actions in IE11
+ */
+.cw-sortable > * {
+  touch-action: none;
+}
+/*
+ * Disables the default callout shown when you touch and hold a touch target
+ * Currently only works in Webkit
+ */
+.cw-sortable a,
+.cw-sortable img {
+  -webkit-touch-callout: none;
+}
+/*
+ * Remove margin from the last-child
+ */
+.cw-sortable > :last-child {
+  margin-bottom: 0;
+}
+/* Sub-modifier `cw-sortable-dragged`
+ ========================================================================== */
+.cw-sortable-dragged {
+  position: absolute;
+  z-index: 1050;
+  pointer-events: none;
+}
+/* Sub-modifier `cw-sortable-placeholder`
+ ========================================================================== */
+.cw-sortable-placeholder {
+  opacity: 0;
+}
+/* Empty List
+ ========================================================================== */
+.cw-sortable-empty {
+  min-height: 30px;
+}
+/* Sub-object `cw-sortable-handle`
+ ========================================================================== */
+/*
+ * Deactivate browser touch actions in IE11
+ */
+.cw-sortable-handle {
+  touch-action: none;
+}
+/* Hover */
+.cw-sortable-handle:hover {
+  cursor: move;
+}
+/* Sub-object `cw-sortable-moving`
+ ========================================================================== */
+.cw-sortable-moving,
+.cw-sortable-moving * {
+  cursor: move;
+}
+/* Fixes dragging items over iframes */
+.cw-sortable-moving iframe {
+  pointer-events: none;
+}

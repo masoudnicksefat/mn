@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" method="upgrade" group="system">
+	<name>لودر زبان افزونه های جومی</name>
+	<author>JOOMI.IR IT Group</author>
+	<creationDate>August 2015</creationDate>
+	<copyright>Copyright (C) 2011-2015 GavickPro. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>info@joomi.ir</authorEmail>
+	<authorUrl>www.joomi.ir</authorUrl>
+	<version>1.2.0</version>
+	<description>لودر زبان افزونه های جومی</description>
+	
+	<scriptfile>script.php</scriptfile>
+	
+	<files>
+		<filename plugin="joomi_language_loader">joomi_language_loader.php</filename>
+		<filename>joomi_language_loader.xml</filename>
+		<filename>index.html</filename>
+		<filename>script.php</filename>
+		<folder>languages</folder>
+	</files>
+	
+</extension>

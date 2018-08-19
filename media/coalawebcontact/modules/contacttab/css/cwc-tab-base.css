@@ -1,0 +1,91 @@
+/**
+ * @author              Steven Palmer
+ * @author url          https://coalaweb.com/
+ * @author email        support@coalaweb.com
+ * @copyright           Copyright (c) 2017 Steven Palmer All rights reserved.
+ */
+
+.cwc-tab * {box-sizing: content-box;}
+
+.cwc-tab {
+    position: fixed;
+    padding: 0px;
+    list-style: none;
+    z-index:9999;
+}
+/* Main Left and Right*/
+#cwc-slideout.left {left: 0px;}
+#cwc-slideout.right {right: 0px;}
+
+#cwc-slideout{
+    position:fixed;
+    z-index:1000;
+}
+
+/* Tab left and right */
+.cwc-contact-tab.left {left: 280px;}
+.cwc-contact-tab.right {right: 280px;}
+.cwc-contact-tab {
+    position:fixed;
+    z-index:1000;
+    height:40px;
+    width:48px;
+}
+
+.cwc-contact-tab a {    
+    height:40px;
+    width:40px;
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+a.cwc-icon-1 { background: url(../icons/cwc-icon-1.png); }
+a.cwc-icon-2 { background: url(../icons/cwc-icon-2.png); }
+a.cwc-icon-3 { background: url(../icons/cwc-icon-3.png); }
+
+.cwc-contact-tab a:hover, 
+.cwc-contact-tab a:active, 
+.cwc-contact-tab a:focus {
+  outline: 0;
+ }
+ 
+#cwc-slidecontent {
+    float:left;
+    width: 250px;
+    text-align: left;
+    padding:10px 10px 10px 20px;
+}
+
+#cwc-slidecontent form {
+    display:block;
+    width:250px;
+}
+
+#cwc-slidecontent select, 
+#cwc-slidecontent textarea, 
+#cwc-slidecontent input[type="text"], 
+#cwc-slidecontent input[type="password"], 
+#cwc-slidecontent input[type="datetime"], 
+#cwc-slidecontent input[type="datetime-local"], 
+#cwc-slidecontent input[type="date"], 
+#cwc-slidecontent input[type="month"], 
+#cwc-slidecontent input[type="time"], 
+#cwc-slidecontent input[type="week"], 
+#cwc-slidecontent input[type="number"], 
+#cwc-slidecontent input[type="email"], 
+#cwc-slidecontent input[type="url"], 
+#cwc-slidecontent input[type="search"], 
+#cwc-slidecontent input[type="tel"], 
+#cwc-slidecontent input[type="color"], 
+#cwc-slidecontent .uneditable-input {
+    width: 85%;
+}
+
+#cwc-slidecontent .charcount,
+#cwc-slidecontent .cal-format,
+#cwc-slidecontent .cwc-msg {
+    width:85%;
+}
+

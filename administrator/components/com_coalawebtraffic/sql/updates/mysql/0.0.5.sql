@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS `#__cwtraffic_total` ( `tcount` int(11) NOT NULL ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

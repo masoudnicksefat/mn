@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addons>
+    <addon name="articles"
+        label="GSD_ARTICLES"
+        description="GSD_ARTICLE_DATA_DESC"
+        docalias="the-articles-snippet"
+        proonly="false"
+        image="https://static.tassos.gr/images/galleries/gsdm/04.jpg"
+    />
+    <addon name="courses"
+        label="GSD_COURSES"
+        description="GSD_COURSE_DATA_DESC"
+        docalias="the-courses-snippet"
+        image="https://developers.google.com/search/docs/data-types/images/courses01.png"
+    />
+    <addon name="products"
+        label="GSD_PRODUCTS"
+        description="GSD_PRODUCT_DATA_DESC"
+        docalias="the-products-snippet"
+        image="https://static.tassos.gr/images/galleries/gsdm/05.jpg"
+    />
+    <addon name="events"
+        label="GSD_EVENTS"
+        description="GSD_EVENT_DATA_DESC"
+        docalias="the-events-snippet"
+        image="https://static.tassos.gr/images/galleries/gsdm/06.jpg"
+    />
+    <addon name="recipes"
+        label="GSD_RECIPES"
+        description="GSD_RECIPE_DATA_DESC"
+        docalias="the-recipes-snippet"
+        image="https://static.tassos.gr/images/galleries/gsdm/07.jpg"
+    />
+    <addon name="reviews"
+        label="GSD_REVIEWS"
+        description="GSD_REVIEW_DATA_DESC"
+        docalias="the-reviews-snippet"
+        image="https://static.tassos.gr/images/galleries/gsdm/06.jpg"
+    />
+    <addon name="factchecks"
+        label="GSD_FACTCHECKS"
+        description="GSD_FACTCHECK_DATA_DESC"
+        docalias="the-fact-check-content-type"
+        image="https://developers.google.com/search/docs/data-types/images/factcheck-gallery.png"
+    />
+    <addon name="videos"
+        label="GSD_VIDEOS"
+        description="GSD_VIDEOS_DESC"
+        docalias="the-videos-content-type"
+        image="https://developers.google.com/search/docs/data-types/images/video-imagesearch.png"
+    />
+</addons>

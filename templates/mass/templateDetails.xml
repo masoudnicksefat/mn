@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>mass</name>
+	<version>1.0</version>
+	<creationDate>16/04/1396</creationDate>
+	<author>Masoud Nicksefat</author>
+	<authorEmail>info@masoudnicksefat.ir</authorEmail>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>TPL_MASS_XML_DESCRIPTION</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>fonts</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>about</position>
+		<position>about-pic</position>
+		<position>slider</position>
+		<position>left</position>
+		<position>right</position>
+		<position>payment-guide</position>
+		<position>social</position>
+		<position>top-skills</position>
+		<position>skills</position>
+		<position>portfolio</position>
+		<position>testimonial</position>
+		<position>footer-custom</position>
+		<position>news</position>
+		<position>services</position>
+		<position>contact</position>
+		<position>contact-right</position>
+		<position>copyright</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_mass.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_mass.sys.ini</language>
+		<language tag="fa-IR">fa-IR/fa-IR.tpl_mass.ini</language>
+		<language tag="fa-IR">fa-IR/fa-IR.tpl_mass.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field 
+					name="templateColor" 
+					type="color" 
+					label="TPL_MASS_COLOR_LABEL"
+					description="TPL_MASS_COLOR_DESC" 
+					class="" 
+					default="#08C"
+				/>
+
+				<field 
+					name="templateBackgroundColor" 
+					type="color" 
+					label="TPL_MASS_BACKGROUND_COLOR_LABEL"
+					description="TPL_MASS_BACKGROUND_COLOR_DESC" 
+					class="" 
+					default="#F4F6F7"
+				/>
+
+				<field 
+					name="logoFile" 
+					type="media" 
+					label="TPL_MASS_LOGO_LABEL"
+					description="TPL_MASS_LOGO_DESC" 
+					class="" 
+					default=""
+				/>
+				
+				<field 
+					name="picFile" 
+					type="media" 
+					label="TPL_MASS_LOGO_LABEL"
+					description="TPL_MASS_LOGO_DESC" 
+					class="" 
+					default="templates/mass/images/myAvatar.png"
+				/>
+
+				<field 
+					name="sitetitle"  
+					type="text" 
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					default=""
+					filter="string" 
+				/>
+
+				<field 
+					name="sitedescription"  
+					type="text" 
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					default=""
+					filter="string" 
+				/>
+
+				<field 
+					name="googleFont"
+					type="radio"
+					label="TPL_MASS_FONT_LABEL"
+					description="TPL_MASS_FONT_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field 
+					name="googleFontName" 
+					type="text" 
+					label="TPL_MASS_FONT_NAME_LABEL"
+					description="TPL_MASS_FONT_NAME_DESC" 
+					class="" 
+					default="Open+Sans"
+					showon="googleFont:1" 
+				/>
+
+				<field 
+					name="fluidContainer"
+					type="radio"
+					label="TPL_MASS_FLUID_LABEL"
+					description="TPL_MASS_FLUID_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">TPL_MASS_FLUID</option>
+					<option value="0">TPL_MASS_STATIC</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
